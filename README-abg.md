@@ -41,7 +41,7 @@ The Changes
 
 * The ABG/Celtic international layout is implemented:
 
-	* Page Up/Down become "\|" and "<>" (the "international key")
+	* Page Up/Down become "\\|" and "<>" (the "international key")
 	* Any and Num become "-_" and "=+"
 	* "-_" and "=+" become "[{" and "]}"
 
@@ -74,6 +74,17 @@ ___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
 Tab ___ MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
 Hom LBu MLe MDn MRi RBu            ___ Le  Dn  Ri  }   ___
 End PSc MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
+            ___ Del ___ ___    ___ ___ Ret  ___
+```
+
+ABG Function Minimal Changes
+----------------------------
+
+```
+___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
+Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
+Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ Num
+End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
             ___ Del ___ ___    ___ ___ Ret  ___
 ```
 
