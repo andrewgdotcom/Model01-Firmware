@@ -1,14 +1,13 @@
-ABG/Celtic firmware variant layout
-==================================
+ABG firmware variant layout
+===========================
 
-This repository contains a small number of commits that vary the default 
+This repository contains alternative layer files that vary the default 
 keyboardio firmware layout to make multilingual typing more intuitive and
 fix a selection of annoyances.
 
-The commits are mostly atomic and can be applied individually, however the
-base layer changes require that three keys be moved from the base layer to
-the Fn layer, so failing to apply the Fn layer commits will result in loss of
-functionality.
+While the layers can be applied individually, it is strongly recommended
+that the abg-multilingual layer not be enabled without also enabling one of
+the abg-function-* layers, so that PgUp, PgDn and Num remain accessible.
 
 How to use
 ----------
@@ -51,9 +50,13 @@ The Changes
 	* Butterfly is now Command/GUI
 	* Command/GUI and Alt become the Shift keys
 	* The old Shift keys become Left-Alt and Right-Alt (=AltGr)
+		This better facilitates touch-typing with AltGr
 
-Base layer
-----------
+The layer definitions
+=====================
+
+ABG Multilingual
+----------------
 
 ```
 Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  =+
@@ -63,8 +66,8 @@ Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  =+
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
-Fn layer
---------
+ABG Function Inverted-T
+-----------------------
 
 ```
 ___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
@@ -74,8 +77,8 @@ End PSc MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
             ___ Del ___ ___    ___ ___ Ret  ___
 ```
 
-Numpad layer
-------------
+ABG Numpad Apple
+----------------
 
 ```
 ___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
