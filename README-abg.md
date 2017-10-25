@@ -20,8 +20,7 @@ Otherwise the steps are identical.
 The Changes
 ===========
 
-* Arrow keys are properly homed to sit under the keys "JKL;".
-	The default keymap requires the user to change hand position.
+* Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
 
 * Numpad is properly homed as per e.g. Kinesis and implements the standard Apple
 	keypad layout for the non-numeric keys. It also fixes a bug where
