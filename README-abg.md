@@ -68,8 +68,8 @@ Fn layer
 
 ```
 ___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
-Tab ___ MNW MUp MNE MWE PUp    Pla Nxt {   }   [   ]   F12
-Hom LBu MLe MDn MRi RBu            ___ Le  Dn  Up  Ri  ___
+Tab ___ MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
+Hom LBu MLe MDn MRi RBu            ___ Le  Dn  Ri  }   ___
 End PSc MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
             ___ Del ___ ___    ___ ___ Ret  ___
 ```
@@ -78,10 +78,10 @@ Numpad layer
 ------------
 
 ```
-                               VER ___ Clr =   /   *   ___
-                               ___ ___ 7   8   9   -   ___
-                                   Bs  4   5   6   +   ___
-                               ___ ___ 1   2   3   Ent ___
-                               ___ ___ 0   .
+___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
+Tab ___ ___ Up  ___ ___ PUp    ___ ___ 7   8   9   -   ___
+Hom ___ Le  Dn  Ri  ___            Bs  4   5   6   +   ___
+End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
+            ___ ___ ___ ___    ___ ___ 0   .
 ```
 

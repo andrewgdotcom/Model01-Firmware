@@ -189,7 +189,7 @@ KEYMAPS(
 
   [NUMPAD] =  KEYMAP_STACKED
   (___,      ___, ___,           ___,           ___,            ___,        ___,
-   ___,      ___, ___,           Key_UpArrow,   ___,            ___,        Key_PageUp,
+   Key_Tab,  ___, ___,           Key_UpArrow,   ___,            ___,        Key_PageUp,
    Key_Home, ___, Key_LeftArrow, Key_DownArrow, Key_RightArrow, ___,
    Key_End,  ___, ___,           ___,           ___,            Key_Insert, Key_PageDown,
    ___, ___, ___, ___,
