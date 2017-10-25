@@ -149,62 +149,16 @@ enum { PRIMARY, NUMPAD, FUNCTION }; // layers
 
 
 
-/* This comment temporarily turns off astyle's indent enforcement
- *   so we can make the keymaps actually resemble the physical key layout better
- */
-// *INDENT-OFF*
-
-KEYMAPS(
-
-  [QWERTY] = KEYMAP_STACKED
-  (___,                          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
-   Key_Backtick,                 Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
-   Key_Backslash,                Key_A, Key_S, Key_D, Key_F, Key_G,
-   Key_NonUsBackslashAndPipe,    Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Escape,
-   Key_LeftControl, Key_Backspace, Key_LeftShift, Key_LeftAlt,
-   ShiftToLayer(FUNCTION),
-
-   Key_Minus,     Key_6, Key_7, Key_8,     Key_9,         Key_0,         Key_Equals,
-   Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_LeftBracket,
-                  Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
-   Key_RightGui,  Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_RightBracket,
-   Key_RightAlt, Key_RightShift, Key_Spacebar, Key_RightControl,
-   ShiftToLayer(FUNCTION)),
-
-  [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,           Key_F2,           Key_F3,         Key_F4,            Key_F5,           XXX,
-   Key_Tab,  ___,              Key_mouseWarpNW,  Key_mouseUp,    Key_mouseWarpNE,   Key_mouseWarpEnd, Key_PageUp,
-   Key_Home, Key_mouseBtnL,    Key_mouseL,       Key_mouseDn,    Key_mouseR,        Key_mouseBtnR, 
-   Key_End,  Key_PrintScreen,  Key_mouseWarpSW,  Key_mouseBtnM,  Key_mouseWarpSE,   Key_Insert,       Key_PageDown,
-   ___, Key_Delete, ___, ___,
-   ___,
-
-   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_UpArrow,              Key_LeftBracket, Key_RightBracket,      Key_F12,
-                               ___,                    Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, ___,
-   Key_PcApplication,          Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, Key_Pipe,        Key_Backslash,         Key_KeypadNumLock,
-   ___, ___, Key_Enter, ___,
-   ___),
-
-
-  [NUMPAD] =  KEYMAP_STACKED
-  (___,      ___, ___,           ___,           ___,            ___,        ___,
-   Key_Tab,  ___, ___,           Key_UpArrow,   ___,            ___,        Key_PageUp,
-   Key_Home, ___, Key_LeftArrow, Key_DownArrow, Key_RightArrow, ___,
-   Key_End,  ___, ___,           ___,           ___,            Key_Insert, Key_PageDown,
-   ___, ___, ___, ___,
-   ___,
-
-   M(MACRO_VERSION_INFO),  ___,           Key_Clear,       Key_KeypadEquals,   Key_KeypadDivide,   Key_KeypadMultiply, ___,
-   ___,                    ___,           Key_Keypad7,     Key_Keypad8,        Key_Keypad9,        Key_KeypadSubtract, ___,
-                           Key_Backspace, Key_Keypad4,     Key_Keypad5,        Key_Keypad6,        Key_KeypadAdd,      ___,
-   ___,                    ___,           Key_Keypad1,     Key_Keypad2,        Key_Keypad3,        Key_KeypadEnter,    ___,
-   ___, ___, Key_Keypad0, Key_KeypadDot,
-   ___)
-) // KEYMAPS(
-
-/* Re-enable astyle's indent enforcement */
-// *INDENT-ON*
+const Key keymaps[][ROWS][COLS] PROGMEM = {
+  [QWERTY] =
+  #include "layer-std-qwerty.h"
+  ,
+  [FUNCTION] =
+  #include "layer-std-function.h"
+  ,
+  [NUMPAD] =
+  #include "layer-std-numpad.h"
+};
 
 /** versionInfoMacro handles the 'firmware version info' macro
  *  When a key bound to the macro is pressed, this macro
