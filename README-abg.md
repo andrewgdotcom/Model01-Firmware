@@ -16,6 +16,8 @@ Follow the instructions in the README.md file, but instead of cloning
 `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
+To enable different keymap layers, edit the include directives in `keymaps.h`.
+
 The Changes
 ===========
 

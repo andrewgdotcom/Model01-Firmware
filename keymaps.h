@@ -41,14 +41,16 @@
 
 enum { QWERTY, FUNCTION, NUMPAD }; // layers
 
+/* Enable and disable layers by editing the various include directives below.
+ * Beware that the include directives MUST be on a line by themselves.
+ */
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
 #include "layer-abg-multilingual.h"
-  ,
-  [FUNCTION] =
+  , [FUNCTION] =
 #include "layer-abg-function-inverted-t.h"
-  ,
-  [NUMPAD] =
+  , [NUMPAD] =
 #include "layer-abg-numpad-apple.h"
 };
 
