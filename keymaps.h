@@ -45,6 +45,9 @@ enum { QWERTY, FUNCTION, NUMPAD }; // layers
  * Beware that the include directives MUST be on a line by themselves.
  */
 
+// Use nonstandard modifier keys
+#include "aliases-abg-modifiers-thumb-enter.h"
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
 #include "layer-abg-multilingual.h"
