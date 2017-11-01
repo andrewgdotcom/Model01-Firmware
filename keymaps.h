@@ -46,7 +46,7 @@ enum { QWERTY, FUNCTION, NUMPAD }; // layers
  */
 
 // Use nonstandard modifier keys
-#include "aliases-abg-modifiers-thumb-enter.h"
+#include "aliases-abg-modifiers.h"
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
