@@ -20,15 +20,15 @@
 
 KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,           Key_F3,         Key_F4,            Key_F5,           XXX,
-   Key_Tab,  ___,              Key_mouseWarpNW,  Key_mouseUp,    Key_mouseWarpNE,   Key_mouseWarpEnd, Key_PageUp,
+   Key_Tab,  SCROLL_UP,        Key_mouseWarpNW,  Key_mouseUp,    Key_mouseWarpNE,   Key_mouseWarpEnd, Key_PageUp,
    Key_Home, Key_mouseBtnL,    Key_mouseL,       Key_mouseDn,    Key_mouseR,        Key_mouseBtnR, 
-   Key_End,  Key_PrintScreen,  Key_mouseWarpSW,  Key_mouseBtnM,  Key_mouseWarpSE,   Key_Insert,       Key_PageDown,
+   Key_End,  SCROLL_DOWN,      Key_mouseWarpSW,  Key_mouseBtnM,  Key_mouseWarpSE,   Key_Insert,       Key_PageDown,
    ___, Key_Delete, ___, ___,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_UpArrow,              Key_LeftBracket, Key_RightBracket,      Key_F12,
-                               ___,                    Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, ___,
+                               Key_PrintScreen,        Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, ___,
    Key_PcApplication,          Key_Mute,               Consumer_VolumeDecrement, Consumer_VolumeIncrement, Key_Pipe,        Key_Backslash,         Key_KeypadNumLock,
    ___, ___, Key_Enter, ___,
    ___)
