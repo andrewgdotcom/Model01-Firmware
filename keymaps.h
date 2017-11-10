@@ -39,26 +39,73 @@
   * the numbers 0, 1 and 2.
   */
 
-enum { QWERTY, FUNCTION, NUMPAD }; // layers
-
-/* Enable and disable layers by editing the various include directives below.
- * Beware that the include directives MUST be on a line by themselves.
+/*
+ * Enable and disable optional features by editing the include directives below.
+ * In general, only one option of each group should be enabled at any time.
+ * Note that these work by defining aliases and so the order of inclusion is important.
  */
 
-// Use single-function layer
+
+/*
+ * Choose Fn-button behaviour. This must be done first.
+ */
+
+// Use single-function layer.
 #include "aliases-std-fn-single.h"
 
-// Use nonstandard modifier keys
-#include "aliases-abg-modifiers.h"
+// Use double-function layers.
+// Note that this usually requires 3n layers to be defined. EXPERIMENTAL!
+//include "aliases-abg-fn-double.h"
+
+
+/*
+ * Choose modifier key layout
+ */
+
+// Use stock modifier key layount
+//include "aliases-std-modifiers.h"
+
+// Use kinesis-style modifier key layout
+#include "aliases-abg-modifiers-thumb-enter.h"
+
+// Use ABG's friendly modifier layout
+//include "aliases-abg-modifiers.h"
+
+
+/*
+ * Choose mouse scrolling behaviour
+ * Note: mouse scrolling is not enabled in standard layers
+ */
 
 // Use traditional mouse scrolling
 #include "aliases-abg-scroll-wheel-traditional.h"
 
-// Use traditional mouse scrolling
-#include "aliases-abg-scroll-wheel-traditional.h"
+// Use "natural" mouse scrolling
+//include "aliases-abg-scroll-wheel-natural.h"
+
+
+/*
+ * Choose a numpad behaviour. This affects how the NUMPAD layer activation
+ * and the OS NumLock key interact.
+ */
+
+// Use stock "magic numpad" behaviour
+//include "aliases-std-numpad-magic-numlock.h"
 
 // Use traditional numpad behaviour
 #include "aliases-abg-numpad-traditional.h"
+
+
+/*
+ * Define our layer names. These must match the layer structure below.
+ */
+
+enum { QWERTY, FUNCTION, NUMPAD }; // layers
+
+/*
+ * Enable and disable layers by editing the various include directives below.
+ * Beware that the include directives MUST be on a line by themselves.
+ */
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
