@@ -54,6 +54,9 @@ enum { QWERTY, FUNCTION, NUMPAD }; // layers
 // Use traditional mouse scrolling
 #include "aliases-abg-scroll-wheel-traditional.h"
 
+// Use traditional numpad behaviour
+#include "aliases-abg-numpad-traditional.h"
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
 #include "layer-abg-multilingual.h"
