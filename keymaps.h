@@ -45,6 +45,9 @@ enum { QWERTY, FUNCTION, NUMPAD }; // layers
  * Beware that the include directives MUST be on a line by themselves.
  */
 
+// Use single-function layer
+#include "aliases-std-fn-single.h"
+
 // Use nonstandard modifier keys
 #include "aliases-abg-modifiers.h"
 
