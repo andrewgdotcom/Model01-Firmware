@@ -260,8 +260,9 @@ KALEIDOSCOPE_INIT_PLUGINS(
   // The macros plugin adds support for macros
   Macros,
 
-  // The MouseKeys plugin lets you add keys to your keymap which move the mouse.
-  MouseKeys,
+    // The numpad plugin is responsible for lighting up the 'numpad' mode
+    // with a custom LED effect
+    &NumPad,
 
   // The HostPowerManagement plugin allows us to turn LEDs off when then host
   // goes to sleep, and resume them when it wakes up.
