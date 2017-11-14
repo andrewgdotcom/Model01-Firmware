@@ -22,16 +22,41 @@ To enable/disable the modifications, edit the include directives in
 The Changes
 ===========
 
-layer-abg-numpad-apple.h
-------------------------
+The Numpad Layer
+----------------
+
+### layer-std-numpad.h
+
+* The stock firmware numpad layer is implemented
+
+### layer-abg-numpad-apple.h
 
 * Numpad is properly homed as per e.g. Kinesis and implements the standard Apple
 	keypad layout for the non-numeric keys. It also fixes a bug where
 	the keypad generated Equals (which varies with OS keymap) rather than
 	the more invariant code KP_Equals. It also adds an extra Backspace key.
 
-layer-abg-function-inverted-t.h
--------------------------------
+The Function Layer
+------------------
+
+### layer-std-function.h
+
+* The stock firmware function layer is implemented
+
+### layer-abg-function-minimal-changes.h
+
+* Duplicate keys are created on the Fn layer to free up space on the base layer:
+
+	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
+	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
+
+### layer-abg-function-inverted-t.h
+
+* Duplicate keys are created on the Fn layer to free up space on the base layer:
+
+	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
+	* Num is duplicated on Fn-C15R3 (the bottom rightmost key).
+		(The magic pipe key is moved to C13R3).
 
 * Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
 	* Right-curlybrace is moved to C14R2
@@ -44,24 +69,30 @@ layer-abg-function-inverted-t.h
 	Insert is displaced, and is relocated under "B" to be close to Delete.
 
 * Mouse scroll keys are added - traditional or "natural" scrolling is 
-	configurable by the aliases-abg-scroll-wheel-* include files.
+	configurable by the `aliases-abg-scroll-wheel-*` include files.
 
-* Duplicate keys are created on the Fn layer to free up space on the base layer:
+The Base Layer
+--------------
 
-	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
-	* Num is duplicated on Fn-C15R3 (the bottom rightmost key).
-		(The magic pipe key is moved to C13R3).
+The base layer is parameterized and controlled by the inclusion of a
+set of alias files. Currently the two supported alias classes are
+`orphans` and `modifiers`. One include file from each class must be
+enabled.
 
-layer-abg-function-minimal-changes.h
-------------------------------------
+### Orphans
 
-* Duplicate keys are created on the Fn layer to free up space on the base layer:
+The `orphans` files control the rearrangement of scancodes from the
+columns to the right of 0 and P on a standard keyboard, for which there
+is not enough room on the Model01. These orphaned scancodes are ANSI
+Minus, Equals, LeftBracket, RightBracket and Backslash.
+NonUsBackslashAndPipe is also handled here as it is absent from the
+default Model01 layout, but is required for non-US keymaps.
 
-	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
-	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
+#### aliases-std-orphans.h
 
-aliases-abg-orphans-abg.h
--------------------------
+* The stock firmware layout is implemented.
+
+#### aliases-abg-orphans-abg.h
 
 * The ABG/Celtic international layout is implemented:
 
@@ -69,14 +100,27 @@ aliases-abg-orphans-abg.h
 	* Any and Num become "-_" and "=+"
 	* "-_" and "=+" become "[{" and "]}"
 
-aliases-abg-orphans-spanish.h
------------------------------
+Note that this requires the use of a nonstandard function layer.
+
+#### aliases-abg-orphans-spanish.h
 
 * As above, but ANSI brackets, backslash and equals are permuted for 
 	easier use with Spanish, Brazilian, Swiss and Slovak OS keymaps
+	
+Note that this requires the use of a nonstandard function layer.
 
-aliases-abg-modifiers.h
------------------------
+### Modifiers
+
+The `modifiers` files control the arrangement of modifier keys. These
+are the two palm keys, the eight thumb keys, and the bottom two keys
+in the extra centre columns. None of these keys has an analogue on a
+standard keyboard, and so their placement is essentially arbitrary.
+
+#### aliases-std-modifiers.h
+
+* The stock firmware layout is implemented
+
+#### aliases-abg-modifiers.h
 
 * The thumb buttons and butterfly key are rearranged:
 
@@ -85,8 +129,7 @@ aliases-abg-modifiers.h
 	* The Shift keys (L/R THUMB_3) become Left-Alt and Right-Alt (=AltGr)
 		This better facilitates touch-typing with AltGr
 
-aliases-abg-modifiers-thumb-enter.h
------------------------------------
+#### aliases-abg-modifiers-thumb-enter.h
 
 * As above, but right THUMB_2 is now Enter/Return, and Del is mapped
 	where Enter was.
