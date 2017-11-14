@@ -85,18 +85,6 @@
 
 
 /*
- * Choose a numpad behaviour. This affects how the NUMPAD layer activation
- * and the OS NumLock key interact.
- */
-
-// Use stock "magic numpad" behaviour
-//include "aliases-std-numpad-magic-numlock.h"
-
-// Use traditional numpad behaviour
-#include "aliases-abg-numpad-traditional.h"
-
-
-/*
  * Choose the arrangement of the orphan keys 
  */
 
