@@ -97,6 +97,20 @@
 
 
 /*
+ * Choose the arrangement of the orphan keys 
+ */
+
+// Use ABG orphan keys
+#include "aliases-abg-orphans-abg.h"
+
+// Use Spanish orphan keys
+//include "aliases-abg-orphans-spanish.h"
+
+// Use stock orphan keys
+//include "aliases-std-orphans.h"
+
+
+/*
  * Define our layer names. These must match the layer structure below.
  */
 
