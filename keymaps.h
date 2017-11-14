@@ -86,6 +86,7 @@
 
 /*
  * Choose the arrangement of the orphan keys 
+ * These are referred to by the qwerty-paramaterized layer
  */
 
 // Use ABG orphan keys
@@ -111,7 +112,7 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
   [QWERTY] =
-#include "layer-abg-multilingual.h"
+#include "layer-std-qwerty-parameterized.h"
   , [NUMPAD] =
 #include "layer-abg-numpad-apple.h"
   , [FUNCTION] =
