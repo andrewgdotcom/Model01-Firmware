@@ -47,18 +47,6 @@
 
 
 /*
- * Choose Fn-button behaviour. This must be done first.
- */
-
-// Use single-function layer.
-#include "aliases-std-fn-single.h"
-
-// Use double-function layers.
-// Note that this usually requires 3n layers to be defined. EXPERIMENTAL!
-//include "aliases-abg-fn-double.h"
-
-
-/*
  * Choose modifier key layout
  */
 
