@@ -77,8 +77,8 @@
  * These are referred to by the qwerty-paramaterized layer
  */
 
-// Use ABG orphan keys
-#include "aliases-abg-orphans-abg.h"
+// Use merlin's second proposed orphan keys
+#include "aliases-abg-orphans-merlin2.h"
 
 // Use Spanish orphan keys
 //include "aliases-abg-orphans-spanish.h"
