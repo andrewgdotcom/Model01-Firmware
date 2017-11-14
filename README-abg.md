@@ -72,8 +72,8 @@ aliases-abg-orphans-abg.h
 aliases-abg-orphans-spanish.h
 -----------------------------
 
-* As above, but ANSI backslash and right-bracket are swapped, for 
-	easier use with Spanish OS keymaps
+* As above, but ANSI brackets, backslash and equals are permuted for 
+	easier use with Spanish, Brazilian, Swiss and Slovak OS keymaps
 
 aliases-abg-modifiers.h
 -----------------------
@@ -105,6 +105,17 @@ Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  =+
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
+Base layer with orphans-abg-spanish and modifiers-abg
+-----------------------------------------------------
+
+```
+Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  ]}
+`~  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   [{
+=+  A   S   D   F   G              H   J   K   L   ;:  '"
+<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  \|
+            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
+```
+
 ABG Numpad Apple
 ----------------
 
@@ -121,10 +132,10 @@ ABG Function Inverted-T
 
 ```
 ___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
-Tab ___ MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
-Hom LBu MLe MDn MRi RBu            ___ Le  Dn  Ri  }   ___
-End PSc MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
-            ___ Del ___ ___    ___ ___ Ret  ___
+Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
+Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
+End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
+            ___ Del ___ ___    ___ ___ Ret ___
 ```
 
 ABG Function Minimal Changes
@@ -135,6 +146,6 @@ ___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
 Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
 Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ Num
 End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
-            ___ Del ___ ___    ___ ___ Ret  ___
+            ___ Del ___ ___    ___ ___ Ret ___
 ```
 
