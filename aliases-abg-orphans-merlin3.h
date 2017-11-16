@@ -14,8 +14,8 @@
 #define LEFT_OF_A		Key_Quote
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
-#define LEFT_OF_6		Key_Minus
+#define LEFT_OF_6		Key_Equals
 #define RIGHT_OF_0		LockLayer(NUMPAD)
 #define RIGHT_OF_P		Key_LeftBracket
 #define RIGHT_OF_SEMICOLON	Key_Backslash
-#define RIGHT_OF_SLASH		Key_Equals
+#define RIGHT_OF_SLASH		Key_Minus
