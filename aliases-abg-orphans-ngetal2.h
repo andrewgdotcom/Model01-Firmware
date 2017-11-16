@@ -1,5 +1,5 @@
 /*
- * Arrange orphaned keys according to ABG QWERTY/Dvorak/AZERTY optimization
+ * Arrange orphaned keys according to @ngetal's quasi-stock layout
  * With @merlin's 2nd suggestion, using LED as a printable instead of NUM
  */
 
@@ -12,10 +12,10 @@
 #define LEFT_OF_A		Key_Backslash
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
-#define RIGHT_OF_5		Key_Minus
-#define LEFT_OF_6		Key_Equals
+#define RIGHT_OF_5		Key_LeftBracket
+#define LEFT_OF_6		Key_RightBracket
 
 #define RIGHT_OF_0		LockLayer(NUMPAD)
-#define RIGHT_OF_P		Key_LeftBracket
+#define RIGHT_OF_P		Key_Equals
 #define RIGHT_OF_SEMICOLON 	Key_Quote
-#define RIGHT_OF_SLASH		Key_RightBracket
+#define RIGHT_OF_SLASH		Key_Minus

@@ -9,12 +9,13 @@
  */
 
 #define LEFT_OF_1               ___
-#define RIGHT_OF_5		Key_Backtick
 #define LEFT_OF_Q		Key_LeftBracket
 #define LEFT_OF_A		Key_Quote
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
+#define RIGHT_OF_5		Key_Backtick
 #define LEFT_OF_6		Key_Equals
+
 #define RIGHT_OF_0		LockLayer(NUMPAD)
 #define RIGHT_OF_P		Key_LeftBracket
 #define RIGHT_OF_SEMICOLON	Key_Backslash

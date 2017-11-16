@@ -7,12 +7,13 @@
  */
 
 #define LEFT_OF_1		___
-#define RIGHT_OF_5		Key_LEDEffectNext
 #define LEFT_OF_Q		Key_Backtick
 #define LEFT_OF_A		Key_Backslash
 #define LEFT_OF_Z		Key_NonUsBackslashAndPipe
 
+#define RIGHT_OF_5		Key_LEDEffectNext
 #define LEFT_OF_6		Key_Minus
+
 #define RIGHT_OF_0		Key_Equals
 #define RIGHT_OF_P		Key_LeftBracket
 #define RIGHT_OF_SEMICOLON 	Key_Quote
