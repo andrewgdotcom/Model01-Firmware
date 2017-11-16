@@ -174,7 +174,7 @@ ABG Function Inverted-T
 -----------------------
 
 ```
-___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
+___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
 Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
 End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
@@ -185,7 +185,7 @@ ABG Function Minimal Changes
 ----------------------------
 
 ```
-___ F1  F2  F3  F4  F5  XXX    Pre F6  F7  F8  F9  F10 F11
+___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
 Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ Num
 End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |

@@ -8,6 +8,7 @@
  * use one of the ABG Fn layers so that PgUp and PgDn can be accessed.
  */
 
+#define LEFT_OF_1               ___
 #define RIGHT_OF_5		Key_Backtick
 #define LEFT_OF_Q		Key_LeftBracket
 #define LEFT_OF_A		Key_Quote

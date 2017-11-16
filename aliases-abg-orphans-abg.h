@@ -6,6 +6,7 @@
  * use one of the ABG Fn layers so that PgUp, PgDn and Num can be accessed.
  */
 
+#define LEFT_OF_1		___
 #define RIGHT_OF_5		Key_LEDEffectNext
 #define LEFT_OF_Q		Key_Backtick
 #define LEFT_OF_A		Key_Backslash

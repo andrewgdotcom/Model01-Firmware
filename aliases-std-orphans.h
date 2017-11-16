@@ -2,6 +2,7 @@
  * Arrange orphaned keys according to stock layout
  */
 
+#define LEFT_OF_1               ___
 #define RIGHT_OF_5		Key_LEDEffectNext
 #define LEFT_OF_Q		Key_Quote
 #define LEFT_OF_A		Key_PageUp
