@@ -1,5 +1,11 @@
 # Keyboardio Model 01 Firmware
 
+## Extended config maintained by Andrew Gallagher (@andrewgdotcom, ABG)
+
+Please read [README-abg.md] for a full description of the layout
+extensions. The rest of this file contains build instructions and still
+applies.
+
 _The default firmware for the Keyboardio Model 01_
 
 <h3>This is a quick start guide for folks who are familiar with Arduino and prefer to use the command line. For everyone else:
