@@ -51,6 +51,7 @@ The Function Layer
 	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
 	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
 	* LED is duplicated on Fn-LED
+	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
 ### layer-abg-function-inverted-t.h
 
@@ -60,6 +61,7 @@ The Function Layer
 	* Num is duplicated on Fn-C15R3 (the bottom rightmost key).
 		(The magic pipe key is moved to C13R3).
 	* LED is duplicated on Fn-LED
+	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
 * Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
 	* Right-curlybrace is moved to C14R2
