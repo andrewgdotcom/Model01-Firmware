@@ -110,8 +110,8 @@ compromises to be made than others.
 The `orphans` files control the arrangement of orphaned keys across the
 outside columns at the very left and right of the Model01, and on the
 `LED` and `Any` keys in the top middle. Since most keyboard layouts
-require more scancodes than the default firmware layout provides, the
-`LED`, `PgUp` and `PgDn` keys must be moved to the function layer. See
+require more scancodes than the default firmware layout provides, at
+least three keys must be moved to the function layer. See
 "The Function Layer" above.
 
 The orphan key arrangements supported here are designed using the 
@@ -127,12 +127,17 @@ paired side by side, classes 1, 2 and 3) or the two keys directly
 below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
+	(Dvorak, AZERTY, QWERTZ, Canadian, Italian, Nordic)
 * Class 2: brackets on the second row (to the right of `UIOP`)
+	(English QWERTY, Dutch, programmer Polish)
 * Class 3: brackets on the third row (to the right of `JKL<something>`)
+	(Latin American Spanish)
 * Class 4: opening and closing brackets above and below each other, immediately to the left of `Enter`
+	(Brazilian Portugese)
 	* Class 4j: as above, with extra keys for Japanese language support
 * Class 5: square and curly brackets on separate keys, one pair on the
 	second row as per class 2 and one on the third as per class 3
+	(European Spanish, Swiss French/German)
 
 In all layouts other than `std` and `japan`, the non-US extra key that
 is normally found beside left-shift is retained in the analogous
@@ -148,7 +153,8 @@ constraints.
 
 The stock firmware layout is implemented. This is the only orphans
 option that works with the `layer-std-function.h` function layer. It is
-recommended for use only with US-ASCII layouts.
+recommended for use only with the US-ASCII layout, as it does not have
+a non-US backslash key (the extra key to the right of left-shift).
 
 ### aliases-abg-orphans-merlin2.h
 
@@ -166,7 +172,7 @@ language keymaps.
 ### aliases-abg-orphans-ngetal2.h
 
 For class 2 language keymaps, such as Colemak, and those QWERTY
-languages (US, Dutch, programmer Polish) that normally have square
+keymaps (English, Dutch, programmer Polish) that normally have square
 brackets on the two keys to the right of `P`. This layout moves the
 square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
