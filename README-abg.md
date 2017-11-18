@@ -12,7 +12,7 @@ the abg-function-* layers, so that PgUp, PgDn and Num remain accessible.
 How to use
 ----------
 
-Follow the instructions in the README.md file, but instead of cloning
+Follow the instructions in the [README.md] file, but instead of cloning
 `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
@@ -72,55 +72,171 @@ The Function Layer
 	configurable by the `aliases-abg-scroll-wheel-*` include files.
 
 The Base Layer
---------------
+==============
 
 The base layer is parameterized and controlled by the inclusion of a
 set of alias files. Currently the two supported alias classes are
 `orphans` and `modifiers`. One include file from each class must be
 enabled.
 
-### Orphans
+Orphans
+-------
 
-The `orphans` files control the rearrangement of scancodes from the
-columns to the right of 0 and P on a standard keyboard, for which there
-is not enough room on the Model01. These orphaned scancodes are ANSI
-Minus, Equals, LeftBracket, RightBracket and Backslash.
-NonUsBackslashAndPipe is also handled here as it is absent from the
-default Model01 layout, but is required for non-US keymaps.
+Most computer keyboards are highly asymmetrical. A column-based
+keyboard such as the Model01 realigns the most commonly-used keys in a
+symmetrical arrangement. These keys are the digits `1, 2, ... 0` and
+the keys below and slightly to one side of them (`1QAZ`, `2WSX`,
+... `0P;/` on a US keyboard; the labels vary according to language).
+The Model01 arranges these 40 keys in a roughly rectangular layout, but
+with the columns shifted up and down slightly to match the different
+lengths of each finger.
 
-#### aliases-std-orphans.h
+Because an asymmetrical key layout can never be exactly mapped onto a
+symmetrical layout, there are around ten keys that produce either
+accented letters or symbols (depending on your language settings) but
+do not fit this rectangular pattern. These are the 'orphaned keys' and
+no one treatment of them will satisfy all languages. This is because
+the language keymaps were designed (separately) based on various
+assumptions about physical key locations that the Model01 cannot meet
+simultaneously. Therefore, some language layouts require different
+compromises to be made than others.
 
-* The stock firmware layout is implemented.
+The `orphans` files control the arrangement of orphaned keys across the
+outside columns at the very left and right of the Model01, and on the
+`LED` and `Any` keys in the top middle. Since most keyboard layouts
+require more scancodes than the default firmware layout provides, the
+`LED`, `PgUp` and `PgDn` keys must be moved to the function layer. See
+"The Function Layer" above.
+
+The orphan key arrangements supported here are designed using the 
+principle of least surprise. This means that any changes from a
+standard keyboard should present the minimum amount of confusion to a
+user familiar with a standard keyboard layout (of whatever language).
+
+Each language layout is grouped into a class of layouts based upon where
+the square brackets are normally found on a standard keyboard.
+Since these bracket keys are usually
+paired, they are moved to either between `5` and `6` on the top row (if
+paired side by side, classes 1, 2 and 3) or the two keys directly
+below `Prog` on the left hand side (if paired above and below, classes
+4 and 5).
+
+* Class 1: brackets on the first (number) row or no paired brackets
+* Class 2: brackets on the second row (to the right of `P`)
+* Class 3: brackets on the third row (to the right of `;`)
+* Class 4: brackets above and below each other, two keys to the right of `P` and `;`
+	* Class 4j: as above, with extra keys for Japanese language support
+* Class 5: square and curly brackets on separate keys, one pair on the second row and one on the third
+
+In all layouts other than `std` and `japan`, the non-US extra key that
+is normally found beside left-shift is retained in the analogous
+location at the bottom left. In `japan` there is no such key, and
+the bottom left position is used instead for `Yen`.
+
+The remaining orphans are rearranged to keep them as close as
+possible to their standard locations, but in almost all cases at least
+one key must move from the top right to the far left due to symmetry
+constraints.
+
+### aliases-std-orphans.h
+
+The stock firmware layout is implemented. This is the only orphans
+option that works with the `layer-std-function.h` function layer. It is
+recommended for use only with US-ASCII layouts.
+
+### aliases-abg-orphans-merlin2.h
+
+For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ and
+QWERTY languages that normally have letters on the keys to the right of
+`P` and `;`. This layout preserves the keys to the right of `P` and `;`
+and moves the two keys to the right of `0` (used for brackets in some
+keymaps) to the keys between `5` and `6` (labelled LED/Any). 
+The key immediately above right-shift is swapped to the left hand,
+on the same row.
+
+### aliases-abg-orphans-ngetal2.h
+
+For class 2 language keymaps, such as US-QWERTY, Colemak, Dutch and
+QWERTY languages that normally have square brackets on the two keys to
+the right of `P`. This layout moves the square brackets to the keys
+between `5` and `6` (labelled LED/Any).
+The key immediately above right-shift is swapped to the left hand,
+on the same row.
+
+### aliases-abg-orphans-latam.h
+
+For class 3 language keymaps, such as Latin American Spanish, which have
+square brackets on the two keys to the right of `;`. This layout moves
+the square brackets to the keys between `5` and `6` (labelled LED/Any).
+The key immediately to the left of `Backspace` is swapped to the left
+hand.
+
+### aliases-abg-orphans-brazil.h
+
+For class 4 language keymaps, such as Brazilian Portugese, which have
+square brackets on the keys two steps to the right of `P` and two steps
+to the right of `;`. This layout moves the square brackets to the two
+keys directly below `Prog`, and ` ` ` goes to the right of `5`.
+
+### aliases-abg-orphans-japan.h
+
+Supports the extra Japanese keys `Ro` and `Yen`, at the expense of
+moving ` ` ` (used as `Zenkaku/Hankaku`) into the function layer.
+The key `Yen` changes hands and goes to the very bottom left corner.
+The two keys between `0` and `Yen` go to between `5` and `6`.
+
+This option should be used in conjuction with the `japan` modifiers
+option (see below).
+
+### aliases-abg-orphans-merlin3.h
+
+For class 5 language keymaps, such as European Spanish and Swiss
+German/French, which have square and curly brackets on all four keys
+to the right of `P` and `;`. This layout moves the opening brackets to
+the keys below `Prog` and leaves the closing brackets on the keys below
+`Num`. ` ` ` goes to the right of `5`.
+
+### Obsolete keymaps
+
+The following keymaps are no longer recommended, as they require the
+`Num` key to be moved to the function layer. They are still usable, so
+long as one of the nonstandard function layers above is enabled.
 
 #### aliases-abg-orphans-abg.h
 
-* The ABG/Celtic international layout is implemented:
-
-	* Page Up/Down become "\\|" and "<>" (the "international key")
-	* Any and Num become "-_" and "=+"
-	* "-_" and "=+" become "[{" and "]}"
-
-Note that this requires the use of a nonstandard function layer.
+The original ABG/Celtic international layout for class 1 keymaps.
+This is the same as `merlin2`, except that the bracket keys are on
+`Any` and `Num` instead of `LED` and `Any`.
 
 #### aliases-abg-orphans-spanish.h
 
-* As above, but ANSI brackets, backslash and equals are permuted for 
-	easier use with Spanish, Brazilian, Swiss and Slovak OS keymaps
-	
-Note that this requires the use of a nonstandard function layer.
+For class 5 keymaps. This is similar to `orphans-abg` except that the
+Spanish closing bracket keys are located on the top right and bottom
+right corner keys. The key to the left of `Backspace` is swapped to the
+left hand.
 
-### Modifiers
+Modifiers
+---------
 
-The `modifiers` files control the arrangement of modifier keys. These
-are the two palm keys, the eight thumb keys, and the bottom two keys
-in the extra centre columns. None of these keys has an analogue on a
-standard keyboard, and so their placement is essentially arbitrary.
+The `modifiers` files control the arrangement of keys that do not
+normally generate letters, numbers or symbols.
 
-#### aliases-std-modifiers.h
+On a standard keyboard these are the spacebar, the keys on either side
+of the spacebar, and the keys at the very left and right edges of the
+main block of letters, numbers and symbols.
+
+On the Model01, these are the two palm keys, the eight thumb keys, and
+the bottom two keys in the extra columns in the middle.
+The arrangement of these keys is largely a matter of personal taste,
+although there are a few obvious choices such as placing the space
+key under one of the thumbs. A small number of reasonable alternatives
+are maintained here.
+
+### aliases-std-modifiers.h
 
 * The stock firmware layout is implemented
 
-#### aliases-abg-modifiers.h
+### aliases-abg-modifiers.h
 
 * The thumb buttons and butterfly key are rearranged:
 
@@ -129,33 +245,28 @@ standard keyboard, and so their placement is essentially arbitrary.
 	* The Shift keys (L/R THUMB_3) become Left-Alt and Right-Alt (=AltGr)
 		This better facilitates touch-typing with AltGr
 
-#### aliases-abg-modifiers-thumb-enter.h
+### aliases-abg-modifiers-thumb-enter.h
 
 * As above, but right THUMB_2 is now Enter/Return, and Del is mapped
 	where Enter was.
 
+### aliases-abg-modifiers-japan.h
+
+* As `abg-modifiers` above, but the Japanese input keys `Kana`,
+	`Henkan` and `Muhenkan` are placed under the thumbs, at the expense of
+	only having one key each for `Shift`, `Control` and `Alt`.
+
 The layer definitions
 =====================
 
-Base layer with orphans-abg and modifiers-abg
----------------------------------------------
+Base layer with orphans-merlin2 and modifiers-abg (US-international)
+-------------------------------------------------------------------
 
 ```
-Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  =+
+Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
 `~  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   [{
 \|  A   S   D   F   G              H   J   K   L   ;:  '"
 <>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  ]}
-            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
-```
-
-Base layer with orphans-abg-spanish and modifiers-abg
------------------------------------------------------
-
-```
-Prg 1!  2@  3#  4$  5%  LED    -_  6^  7&  8*  9(  0)  ]}
-`~  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   [{
-=+  A   S   D   F   G              H   J   K   L   ;:  '"
-<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  \|
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
