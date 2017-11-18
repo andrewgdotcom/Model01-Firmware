@@ -2,7 +2,7 @@
 
 ## Extended config maintained by Andrew Gallagher (@andrewgdotcom, ABG)
 
-Please read [README-abg.md] for a full description of the layout
+Please read [README-abg.md](README-abg.md) for a full description of the layout
 extensions. The rest of this file contains build instructions and still
 applies.
 
