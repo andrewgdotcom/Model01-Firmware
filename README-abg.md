@@ -7,7 +7,8 @@ fix a selection of annoyances.
 
 While the modifications can be applied individually, it is recommended
 that aliases-abg-orphans-* not be used without also enabling one of
-the abg-function-* layers, so that PgUp, PgDn and Num remain accessible.
+the abg-function-* layers, so that `PgUp`, `PgDn`, `LED` and `Num`
+remain accessible.
 
 How to use
 ----------
@@ -33,8 +34,8 @@ The Numpad Layer
 
 * Numpad is properly homed as per e.g. Kinesis and implements the standard Apple
 	keypad layout for the non-numeric keys. It also fixes a bug where
-	the keypad generated Equals (which varies with OS keymap) rather than
-	the more invariant code KP_Equals. It also adds an extra Backspace key.
+	the keypad generated `Equals` (which varies with OS keymap) rather than
+	the more invariant code `KP_Equals`, and also adds an extra `Backspace` key.
 
 The Function Layer
 ------------------
@@ -49,6 +50,7 @@ The Function Layer
 
 	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
 	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
+	* LED is duplicated on Fn-LED
 
 ### layer-abg-function-inverted-t.h
 
@@ -57,6 +59,7 @@ The Function Layer
 	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
 	* Num is duplicated on Fn-C15R3 (the bottom rightmost key).
 		(The magic pipe key is moved to C13R3).
+	* LED is duplicated on Fn-LED
 
 * Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
 	* Right-curlybrace is moved to C14R2
@@ -146,42 +149,46 @@ recommended for use only with US-ASCII layouts.
 
 ### aliases-abg-orphans-merlin2.h
 
-For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ and
-QWERTY languages that normally have letters on the keys to the right of
-`P` and `;`. This layout preserves the keys to the right of `P` and `;`
+For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, and those
+QWERTY languages that normally have letters but no brackets on the keys
+to the right of `P` and `;` (e.g. Canadian, Italian, Nordic).
+This layout preserves the keys to the right of `P` and `;`
 and moves the two keys to the right of `0` (used for brackets in some
-keymaps) to the keys between `5` and `6` (labelled LED/Any). 
+keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
+This layout should also be usable (but not optimized) for class 2
+language keymaps.
+
 ### aliases-abg-orphans-ngetal2.h
 
-For class 2 language keymaps, such as US-QWERTY, Colemak, Dutch and
-QWERTY languages that normally have square brackets on the two keys to
-the right of `P`. This layout moves the square brackets to the keys
-between `5` and `6` (labelled LED/Any).
+For class 2 language keymaps, such as Colemak, and those QWERTY
+languages (US, Dutch, programmer Polish) that normally have square
+brackets on the two keys to the right of `P`. This layout moves the
+square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
 ### aliases-abg-orphans-latam.h
 
 For class 3 language keymaps, such as Latin American Spanish, which have
-square brackets on the two keys to the right of `;`. This layout moves
-the square brackets to the keys between `5` and `6` (labelled LED/Any).
+square brackets on the two keys directly above right-shift, This layout
+moves the square brackets to the keys between `5` and `6`.
 The key immediately to the left of `Backspace` is swapped to the left
 hand.
 
 ### aliases-abg-orphans-brazil.h
 
 For class 4 language keymaps, such as Brazilian Portugese, which have
-square brackets on the keys two steps to the right of `P` and two steps
-to the right of `;`. This layout moves the square brackets to the two
-keys directly below `Prog`, and ` ` ` goes to the right of `5`.
+square brackets on both keys to the left of fat-Enter, above and below.
+This layout moves the square brackets to the two
+keys directly below `Prog`, and backtick goes to the right of `5`.
 
 ### aliases-abg-orphans-japan.h
 
 Supports the extra Japanese keys `Ro` and `Yen`, at the expense of
-moving ` ` ` (used as `Zenkaku/Hankaku`) into the function layer.
+moving backtick (used as `Zenkaku/Hankaku`) into the function layer.
 The key `Yen` changes hands and goes to the very bottom left corner.
 The two keys between `0` and `Yen` go to between `5` and `6`.
 
@@ -204,8 +211,8 @@ long as one of the nonstandard function layers above is enabled.
 
 #### aliases-abg-orphans-abg.h
 
-The original ABG/Celtic international layout for class 1 keymaps.
-This is the same as `merlin2`, except that the bracket keys are on
+The original ABG/Celtic international layout for class 1 and 2 keymaps.
+This is the same as `merlin2`, except that the top-right keys go to
 `Any` and `Num` instead of `LED` and `Any`.
 
 #### aliases-abg-orphans-spanish.h
