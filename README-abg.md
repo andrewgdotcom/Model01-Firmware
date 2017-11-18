@@ -13,7 +13,7 @@ remain accessible.
 How to use
 ----------
 
-Follow the instructions in the [README.md]() file, but instead of cloning
+Follow the instructions in the [README.md](README.md) file, but instead of cloning
 `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
