@@ -127,7 +127,7 @@ paired side by side, classes 1, 2 and 3) or the two keys directly
 below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
-	(Dvorak, AZERTY, QWERTZ, Canadian, Italian, Nordic)
+	(Dvorak, AZERTY, QWERTZ, Canadian, Italian, Nordic, Turkish Q/F)
 * Class 2: brackets on the second row (to the right of `UIOP`)
 	(English QWERTY, Dutch, programmer Polish)
 * Class 3: brackets on the third row (to the right of `JKL<something>`)
@@ -158,9 +158,9 @@ a non-US backslash key (the extra key to the right of left-shift).
 
 ### aliases-abg-orphans-merlin2.h
 
-For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, and those
+For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, Turkish F, and those
 QWERTY languages that normally have letters but no brackets on the keys
-to the right of `UIOP` and `JKL<something>` (e.g. Canadian, Italian, Nordic).
+to the right of `UIOP` and `JKL<something>` (e.g. Canadian, Italian, Nordic, Turkish Q).
 This layout moves the two keys to the right of `0` (brackets in some
 keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
