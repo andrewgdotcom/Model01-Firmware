@@ -48,7 +48,7 @@ The Function Layer
 
 * Duplicate keys are created on the Fn layer to free up space on the base layer:
 
-	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
+	* Page Up/Down keys are duplicated on Fn-E and Fn-C.
 	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
 	* LED is duplicated on Fn-LED
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
