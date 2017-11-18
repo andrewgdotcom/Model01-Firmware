@@ -180,15 +180,16 @@ hand.
 ### aliases-abg-orphans-brazil.h
 
 For class 4 language keymaps, such as Brazilian Portugese, which have
-square brackets on both keys to the left of fat-`Enter`, above and below.
+square brackets on the two keys to the left of `Enter`, above and below.
 This layout moves the square brackets to the two
 keys directly below `Prog`, and backtick goes to the right of `5`.
 
 ### aliases-abg-orphans-japan.h
 
-Supports the extra Japanese keys `Ro` and `Yen`, at the expense of
+Brackets treated as per `brazil`, but also supports the Japanese keys
+`Ro` and `Yen` at the expense of
 moving backtick (used as `Zenkaku/Hankaku`) into the function layer.
-The key `Yen` changes hands and goes to the very bottom left corner.
+The key `Yen` moves to the bottom left corner.
 The two keys between `0` and `Yen` go to between `5` and `6`.
 
 This option should be used in conjuction with the `japan` modifiers
@@ -197,8 +198,8 @@ option (see below).
 ### aliases-abg-orphans-merlin3.h
 
 For class 5 language keymaps, such as European Spanish and Swiss
-German/French, which have square and curly brackets on all four keys
-to the left of fat-`Enter`. This layout moves the opening brackets to
+German/French, which have square and curly brackets separated on the
+four keys to the left of `Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
 `Num`. Backtick goes to the right of `5`.
 
