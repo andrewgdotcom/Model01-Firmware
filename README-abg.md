@@ -121,15 +121,15 @@ the square brackets are normally found on a standard keyboard.
 Since these bracket keys are usually
 paired, they are moved to either between `5` and `6` on the top row (if
 paired side by side, classes 1, 2 and 3) or the two keys directly
-below `Prog` on the left hand side (if paired above and below, classes
-4 and 5).
+below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
-* Class 2: brackets on the second row (to the right of `P`)
-* Class 3: brackets on the third row (to the right of `;`)
-* Class 4: brackets above and below each other, two keys to the right of `P` and `;`
+* Class 2: brackets on the second row (to the right of `UIOP`)
+* Class 3: brackets on the third row (to the right of `JKL<something>`)
+* Class 4: opening and closing brackets above and below each other, immediately to the left of `Enter`
 	* Class 4j: as above, with extra keys for Japanese language support
-* Class 5: square and curly brackets on separate keys, one pair on the second row and one on the third
+* Class 5: square and curly brackets on separate keys, one pair on the
+	second row as per class 2 and one on the third as per class 3
 
 In all layouts other than `std` and `japan`, the non-US extra key that
 is normally found beside left-shift is retained in the analogous
@@ -151,9 +151,8 @@ recommended for use only with US-ASCII layouts.
 
 For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, and those
 QWERTY languages that normally have letters but no brackets on the keys
-to the right of `P` and `;` (e.g. Canadian, Italian, Nordic).
-This layout preserves the keys to the right of `P` and `;`
-and moves the two keys to the right of `0` (used for brackets in some
+to the right of `UIOP` and `JKL<something>` (e.g. Canadian, Italian, Nordic).
+This layout moves the two keys to the right of `0` (brackets in some
 keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
@@ -173,15 +172,15 @@ on the same row.
 ### aliases-abg-orphans-latam.h
 
 For class 3 language keymaps, such as Latin American Spanish, which have
-square brackets on the two keys directly above right-shift, This layout
-moves the square brackets to the keys between `5` and `6`.
+square brackets on the two keys to the right of `JKL<something>`. This
+layout moves the square brackets to the keys between `5` and `6`.
 The key immediately to the left of `Backspace` is swapped to the left
 hand.
 
 ### aliases-abg-orphans-brazil.h
 
 For class 4 language keymaps, such as Brazilian Portugese, which have
-square brackets on both keys to the left of fat-Enter, above and below.
+square brackets on both keys to the left of fat-`Enter`, above and below.
 This layout moves the square brackets to the two
 keys directly below `Prog`, and backtick goes to the right of `5`.
 
@@ -199,9 +198,9 @@ option (see below).
 
 For class 5 language keymaps, such as European Spanish and Swiss
 German/French, which have square and curly brackets on all four keys
-to the right of `P` and `;`. This layout moves the opening brackets to
+to the left of fat-`Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
-`Num`. ` ` ` goes to the right of `5`.
+`Num`. Backtick goes to the right of `5`.
 
 ### Obsolete keymaps
 
