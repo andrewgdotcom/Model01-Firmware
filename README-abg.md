@@ -43,6 +43,7 @@ The Function Layer
 ### layer-std-function.h
 
 * The stock firmware function layer is implemented
+* LED is duplicated on Fn-LED
 
 ### layer-abg-function-minimal-changes.h
 
@@ -64,7 +65,7 @@ The Function Layer
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
 * Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
-	* Right-curlybrace is moved to C14R2
+	* Right-curlybrace is moved to C14R2 (semicolon)
 
 * Mousekeys are properly homed as an inverted-T under the first three fingers.
 	The warp buttons are arranged in a square around the inverted-T.
