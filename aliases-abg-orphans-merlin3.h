@@ -17,6 +17,6 @@
 #define LEFT_OF_6		Key_Equals
 
 #define RIGHT_OF_0		LockLayer(NUMPAD)
-#define RIGHT_OF_P		Key_LeftBracket
+#define RIGHT_OF_P		Key_RightBracket
 #define RIGHT_OF_SEMICOLON	Key_Backslash
 #define RIGHT_OF_SLASH		Key_Minus
