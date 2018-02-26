@@ -59,6 +59,8 @@
 // Use ABG's friendly modifier layout
 //include "aliases-abg-modifiers.h"
 
+// Use Japanese modifier layout
+//include "aliases-abg-modifiers-japan.h"
 
 /*
  * Choose mouse scrolling behaviour
@@ -77,13 +79,29 @@
  * These are referred to by the qwerty-paramaterized layer
  */
 
-// Use merlin's second proposed orphan keys
+// Use merlin's second orphan key set for Class 1 QWERTY and non-QWERTY keymaps
+// (Dvorak, AZERTY, BEPO, QWERTZ, Turkish F/Q, Canadian, Italian, Nordic)
 #include "aliases-abg-orphans-merlin2.h"
 
-// Use Spanish orphan keys
-//include "aliases-abg-orphans-spanish.h"
+// Use ngetal's variation on merlin's orphan keys for Class 2 QWERTY keymaps
+// (International English, Dutch, Programmer Polish)
+//include "aliases-abg-orphans-ngetal2.h"
 
-// Use stock orphan keys
+// Use Latin American Spanish orphan keys for Class 3 QWERTY keymaps
+//include "aliases-abg-orphans-latam.h"
+
+// Use Brazilian orphan keys for Class 4 QWERTY keymaps (Brazilian Portugese)
+//include "aliases-abg-orphans-brazil.h"
+
+// Use Japanese orphan keys.
+// If you enable this, you should also enable "modifiers-japan" above.
+//include "aliases-abg-orphans-japan.h"
+
+// Use merlin's third orphan key set for Class 5 QWERTY keymaps
+// (European Spanish, Swiss French/German)
+//include "aliases-abg-orphans-merlin3.h"
+
+// Use stock orphan key set
 //include "aliases-std-orphans.h"
 
 
