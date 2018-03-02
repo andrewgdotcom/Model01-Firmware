@@ -127,7 +127,7 @@ paired side by side, classes 1, 2 and 3) or the two keys directly
 below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
-	(Dvorak, AZERTY, QWERTZ, Canadian, Italian, Nordic, Turkish Q/F)
+	(Dvorak, AZERTY, QWERTZ, Canadian Multilingual, Italian, Nordic, Turkish Q/F)
 * Class 2: brackets on the second row, to the right of `UIOP`
 	(English QWERTY, Dutch, programmer Polish)
 * Class 3: brackets on the third row, to the right of `JKL<something>`
@@ -137,7 +137,7 @@ below `Prog` on the left hand side (classes 4 and 5).
 	* Class 4j: as above, with extra keys for Japanese language support
 * Class 5: square and curly brackets on separate keys, one pair on the
 	second row as per class 2 and one on the third as per class 3
-	(European Spanish, Swiss French/German)
+	(European Spanish, Swiss French/German, Canadian French)
 
 In all layouts other than `std` and `japan`, the non-US extra key that
 is normally found beside left-shift is retained in the analogous
@@ -160,14 +160,16 @@ a non-US backslash key (the extra key to the right of left-shift).
 
 For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, Turkish F, and those
 QWERTY languages that normally have letters but no brackets on the keys
-to the right of `UIOP` and `JKL<something>` (e.g. Canadian, Italian, Nordic, Turkish Q).
+to the right of `UIOP` and `JKL<something>` (e.g. Canadian CSA
+Multilingual, Italian, Nordic, Turkish Q).
 This layout moves the two keys to the right of `0` (brackets in some
 keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
 This layout should also be usable (but not optimized) for class 2
-language keymaps.
+language keymaps. In this usage, the open and close bracket keys will be above
+and below the home row respectively, in the rightmost column.
 
 ### aliases-abg-orphans-ngetal2.h
 
@@ -206,8 +208,8 @@ option (see below).
 
 ### aliases-abg-orphans-merlin3.h
 
-For class 5 language keymaps, such as European Spanish and Swiss
-German/French, which have square and curly brackets separated on the
+For class 5 language keymaps (e.g. European Spanish, Swiss German/French,
+Canadian French), which have square and curly brackets separated on the
 four keys to the left of `Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
 `Num`. Backtick goes to the right of `5`.

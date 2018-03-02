@@ -80,7 +80,7 @@
  */
 
 // Use merlin's second orphan key set for Class 1 QWERTY and non-QWERTY keymaps
-// (Dvorak, AZERTY, BEPO, QWERTZ, Turkish F/Q, Canadian, Italian, Nordic)
+// (Dvorak, AZERTY, BEPO, QWERTZ, Turkish F/Q, Canadian Multilingual, Italian, Nordic)
 #include "aliases-abg-orphans-merlin2.h"
 
 // Use ngetal's variation on merlin's orphan keys for Class 2 QWERTY keymaps
@@ -98,7 +98,7 @@
 //include "aliases-abg-orphans-japan.h"
 
 // Use merlin's third orphan key set for Class 5 QWERTY keymaps
-// (European Spanish, Swiss French/German)
+// (European Spanish, Swiss French/German, Canadian French)
 //include "aliases-abg-orphans-merlin3.h"
 
 // Use stock orphan key set
