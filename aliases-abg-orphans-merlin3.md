@@ -19,12 +19,10 @@ Orphan key locations
 
 The orphan keys are found in these physical locations on the Model01:
 
-------------|---|-----------|-----------|---|---------------------
 			| 	|RIGHT_OF_5 | LEFT_OF_6	|	|	
 LEFT_OF_Q	|	|			|			|	| RIGHT_OF_P
 LEFT_OF_A	|	|			|			|	| RIGHT_OF_SEMICOLON
 LEFT_OF_Z	|	|			|			|	| RIGHT_OF_SLASH
-------------|---|-----------|-----------|---|---------------------
 
 Note that these labels refer to the relative positions of the keys in a
 US-QWERTY layout, but otherwise have no significance. These key labels
