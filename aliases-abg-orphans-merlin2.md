@@ -15,17 +15,17 @@ Keymap	| L(Z)	| L(A)	| L(Q)	| R(5)	| L(6)	| R(P)	| R(;)	| R(/)
 fr_FR	| <>	| *µ	| ²		| )°]	| =+}	| ^¨	| ù%	| $£¤
 fr_FR@bepo| èÈ	| çÇ	| $#	| =°	| %`	| zZ	| mM	| wW
 de_DE	| <>	| #'	| ^°	| ß?\	| ´`	| üÜ	| äÄ	| +*~
-en_US@dvorak| <>|\&vbar;| `~	| [{	| ]}	| /?	| -_	| =+
-it_IT@alt| <>	| ù§	|\&vbar;| '?	| ì^	| èé	| à°`	| +*~
-se_SE	|<>&vbar;| '*	| §½	| +?\	| ´`	| åÅ	| äÄ	| ¨^~
+en_US@dvorak| <>|\&#124;| `~	| [{	| ]}	| /?	| -_	| =+
+it_IT@alt| <>	| ù§	|\&#124;| '?	| ì^	| èé	| à°`	| +*~
+se_SE	|<>&#124;| '*	| §½	| +?\	| ´`	| åÅ	| äÄ	| ¨^~
 
 `merlin2` is also usable with some class 2 OS keymaps, 
 which have square and curly brackets on the first letter row.
 
 Keymap	| L(Z)	| L(A)	| L(Q)	| R(5)	| L(6)	| R(P)	| R(;)	| R(/)
 --------|-------|-------|-------|-------|-------|-------|-------|-------
-en_US	| <>	|\&vbar;| `~	| -_	| =+	| [{	| '"	| ]}
-it_IT	| <>	| ù§	|\&vbar;| '?	| ì^	| èé[{	| à°#	| +*]}
+en_US	| <>	|\&#124;| `~	| -_	| =+	| [{	| '"	| ]}
+it_IT	| <>	| ù§	|\&#124;| '?	| ì^	| èé[{	| à°#	| +*]}
 
 Orphan key locations
 --------------------
