@@ -19,6 +19,8 @@ Orphan key locations
 
 The orphan keys are found in these physical locations on the Model01:
 
+LH column 0	|...|LH column 6|RH column 7|...|RH column 15	
+------------|---|-----------|-----------|---|--------------
 			| 	|RIGHT_OF_5 | LEFT_OF_6	|	|	
 LEFT_OF_Q	|	|			|			|	| RIGHT_OF_P
 LEFT_OF_A	|	|			|			|	| RIGHT_OF_SEMICOLON
