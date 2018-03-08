@@ -1,31 +1,18 @@
-merlin2 orphans
+ngetal2 orphans
 ===============
 
-`merlin2` is a firmware layout optimised for class 1 OS keymaps,
-which have square and curly brackets on the number row.
-
-Class 1 keymaps often have accented letters on R(P) and R(;) that must
-remain in the same relative locations for touch typists.
+`ngetal2` is a firmware layout optimised for class 2 OS keymaps,
+which have square and curly brackets on the first letter row.
 
 In clockwise order from the bottom left, the orphan keys are mapped
 according to each of the class 1 keymaps:
 
 Keymap	| L(Z)	| L(A)	| L(Q)	| R(5)	| L(6)	| R(P)	| R(;)	| R(/)
 --------|-------|-------|-------|-------|-------|-------|-------|-------
-fr_FR	| <>	| *µ	| ²		| )°]	| =+}	| ^¨	| ù%	| $£¤
-fr_FR@bepo| èÈ	| çÇ	| $#	| =°	| %`	| zZ	| mM	| wW
-de_DE	| <>	| #'	| ^°	| ß?\	| ´`	| üÜ	| äÄ	| +*~
-en_US@dvorak| <>|\\&#124;| `~	| [{	| ]}	| /?	| -_	| =+
-it_IT@alt| <>	| ù§	|\\&#124;| '?	| ì^	| èé	| à°`	| +*~
-se_SE	|<>&#124;| '*	| §½	| +?\	| ´`	| åÅ	| äÄ	| ¨^~
-
-`merlin2` is also usable with some class 2 OS keymaps, 
-which have square and curly brackets on the first letter row, e.g.:
-
-Keymap	| L(Z)	| L(A)	| L(Q)	| R(5)	| L(6)	| R(P)	| R(;)	| R(/)
---------|-------|-------|-------|-------|-------|-------|-------|-------
-en_US	| <>	|\\&#124;| `~	| -_	| =+	| [{	| '"	| ]}
-it_IT	| <>	| ù§	|\\&#124;| '?	| ì^	| èé[{	| à°#	| +*]}
+en_US	| <>	|\\&#124;| `~	| [{	| ]}	| =+	| '"	| -_
+en_GB	|\\&#124;| #~	|`¬&brvbar;| [{	| ]}	| =+	| '@	| -_
+it_IT	| <>	| ù§	|\\&#124;| èé[{	| +*]}	| ì^	| à°#	| '?
+gr_GR	| <>	|\\&#124;| `~	| [{	| ]}	| =+½	| '"	| -_±
 
 Orphan key locations
 --------------------

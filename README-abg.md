@@ -127,9 +127,9 @@ paired side by side, classes 1, 2 and 3) or the two keys directly
 below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
-	(Dvorak, AZERTY, QWERTZ, Canadian Multilingual, Italian, Nordic, Turkish Q/F)
+	(Dvorak, AZERTY, QWERTZ, Canadian Multilingual, Italian alternative, Nordic, Turkish Q/F)
 * Class 2: brackets on the second row, to the right of `UIOP`
-	(English QWERTY, Dutch, programmer Polish)
+	(English QWERTY, Dutch, Italian, programmer Polish)
 * Class 3: brackets on the third row, to the right of `JKL<something>`
 	(Latin American Spanish)
 * Class 4: opening and closing brackets above and below each other, immediately to the left of `Enter`
