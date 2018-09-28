@@ -243,27 +243,55 @@ Prg 1!  2@  3#  4$  5%  [{     }]  6^  7&  8*  9(  0)  Num
 
 For class 3 language keymaps, such as Latin American Spanish, which have
 square brackets on the two keys to the right of `JKL<something>`. This
-layout moves the square brackets to the keys between `5` and `6`.
-The key immediately to the left of `Backspace` is swapped to the left
-hand.
+layout moves the square brackets to the keys between `5` and `6`. The key
+immediately below and to the left of `Backspace` is swapped to the left hand.
+
+#### Behaviour under a Latin American OS layout:
+
+```
+Prg 1!  2"  3#  4$  5%  {[     ]}  6&  7/  8(  9)  0=  Num
+|°  Q   W   E   R   T   Tab    Del Y   U   I   O   P   ´¨
++*  A   S   D   F   G              H   J   K   L   ;:  '?
+<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  ¿¡
+            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+```
 
 ### orphans-class4.h
 
 For class 4 language keymaps, such as Brazilian Portugese, which have
 square brackets on the two keys to the left of `Enter`, above and below.
-This layout moves the square brackets to the two
-keys directly below `Prog`, and backtick goes to the right of `5`.
+This layout moves the square brackets to the two keys directly below `Prog`,
+and the top left key (backtick in US_ASCII) goes to the right of `5`.
+
+#### Behaviour under a Brazilian Portugese OS layout:
+
+```
+Prg 1!  2@  3#  4$  5%  '"     -_  6¨  7&  8*  9(  0)  Num
+[{  Q   W   E   R   T   Tab    Del Y   U   I   O   P   ´`
+}]  A   S   D   F   G              H   J   K   L   Ç   ~^
+\|  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  =+
+            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+```
 
 ### orphans-class4j.h
 
 Brackets treated as per `class4`, but also supports the Japanese keys
-`Ro` and `Yen` at the expense of
-moving backtick (used as `Zenkaku/Hankaku`) into the function layer.
-The key `Yen` moves to the bottom left corner.
+`Ro` and `Yen` at the expense of moving `Zenkaku/Hankaku` (backtick in US_ASCII)
+into the function layer. The key `Yen` moves to the bottom left corner.
 The two keys between `0` and `Yen` go to between `5` and `6`.
 
 This option should be used in conjuction with the `japan` modifiers
 option (see below).
+
+#### Behaviour under a Japanese OS layout:
+
+```
+Prg 1!  2?  3#  4$  5%  -=     ^¯  6&  7'  8(  9)  0~  Num
+[{  Q   W   E   R   T   Tab    Del Y   U   I   O   P   @`
+}]  A   S   D   F   G              H   J   K   L   ;+  :*
+¥|  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  \_
+            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+```
 
 ### orphans-class5.h
 
@@ -271,7 +299,17 @@ For class 5 language keymaps (e.g. European Spanish, Swiss German/French,
 Canadian French), which have square and curly brackets separated on the
 four keys to the left of `Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
-`Num`. Backtick goes to the right of `5`.
+`Num`. `ºª` (backtick in US_ASCII) goes to the right of `5`.
+
+#### Behaviour under a European Spanish OS layout:
+
+```
+Prg 1!  2"  3·  4$  5%  ºª     '?  6&  7/  8(  9)  0=  Num
+`^[ Q   W   E   R   T   Tab    Del Y   U   I   O   P   +*]
+´¨{ A   S   D   F   G              H   J   K   L   Ñ   Ç }
+<>  Z   X   C   V   B   Esc    Cmd N   M   ,;  .:  -_  ¡¿
+            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+```
 
 
 Modifiers
