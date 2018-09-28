@@ -5,10 +5,9 @@ This repository contains alternative layer files that vary the default
 keyboardio firmware layout to make multilingual typing more intuitive and
 fix a selection of annoyances.
 
-While the modifications can be applied individually, it is recommended
-that aliases-abg-orphans-* not be used without also enabling one of
-the abg-function-* layers, so that `PgUp`, `PgDn`, `LED` and `Num`
-remain accessible.
+While the modifications can be applied individually, it is recommended that
+layer-function-std should only be used if orphans-std is enabled, otherwise the
+keys `PgUp`, `PgDn` and `LED` may become inaccessible.
 
 How to use
 ----------
@@ -26,11 +25,11 @@ The Changes
 The Numpad Layer
 ----------------
 
-### layer-std-numpad.h
+### layer-numpad-std.h
 
 * The stock firmware numpad layer is implemented
 
-### layer-abg-numpad-apple.h
+### layer-numpad-apple.h
 
 * Numpad is properly homed as per e.g. Kinesis and implements the standard Apple
 	keypad layout for the non-numeric keys. It also fixes a bug where
@@ -40,27 +39,24 @@ The Numpad Layer
 The Function Layer
 ------------------
 
-### layer-std-function.h
+### layer-function-std.h
 
 * The stock firmware function layer is implemented
 * LED is duplicated on Fn-LED
 
-### layer-abg-function-minimal-changes.h
+### layer-function-with-duplicates.h
 
 * Duplicate keys are created on the Fn layer to free up space on the base layer:
 
 	* Page Up/Down keys are duplicated on Fn-E and Fn-C.
-	* Num is duplicated on Fn-C15R2 (the middle rightmost key).
 	* LED is duplicated on Fn-LED
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
-### layer-abg-function-inverted-t.h
+### layer-function-inverted-t.h
 
 * Duplicate keys are created on the Fn layer to free up space on the base layer:
 
 	* Page Up/Down keys are duplicated on Fn-Tab and Fn-Escape.
-	* Num is duplicated on Fn-C15R3 (the bottom rightmost key).
-		(The magic pipe key is moved to C13R3).
 	* LED is duplicated on Fn-LED
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
@@ -75,12 +71,12 @@ The Function Layer
 	Insert is displaced, and is relocated under "B" to be close to Delete.
 
 * Mouse scroll keys are added - traditional or "natural" scrolling is
-	configurable by the `aliases-abg-scroll-wheel-*` include files.
+	configurable by defining the macros SCROLL_UP and SCROLL_DOWN in keymaps.h.
 
-The Base Layer
-==============
+The Primary Layer
+=================
 
-The base layer is parameterized and controlled by the inclusion of a
+The primary layer is parameterized and controlled by the inclusion of a
 set of alias files. Currently the two supported alias classes are
 `orphans` and `modifiers`. One include file from each class must be
 enabled.
@@ -139,9 +135,9 @@ below `Prog` on the left hand side (classes 4 and 5).
 	second row as per class 2 and one on the third as per class 3
 	(European Spanish, Swiss French/German, Canadian French)
 
-In all layouts other than `std` and `japan`, the non-US extra key that
+In all layouts other than `std` and `class4j`, the non-US extra key that
 is normally found beside left-shift is retained in the analogous
-location at the bottom left. In `japan` there is no such key, and
+location at the bottom left. In `class4j` there is no such key, and
 the bottom left position is used instead for `Yen`.
 
 The remaining orphans are rearranged to keep them as close as
@@ -149,14 +145,14 @@ possible to their standard locations, but in almost all cases at least
 one key must move from the top right to the far left due to symmetry
 constraints.
 
-### aliases-std-orphans.h
+### orphans-std.h
 
 The stock firmware layout is implemented. This is the only orphans
-option that works with the `layer-std-function.h` function layer. It is
+option that works with the `layer-function-std.h` function layer. It is
 recommended for use only with the US-ASCII layout, as it does not have
 a non-US backslash key (the extra key to the right of left-shift).
 
-### aliases-abg-orphans-merlin2.h
+### orphans-class1.h
 
 For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, Turkish F, and those
 QWERTY languages that normally have letters but no brackets on the keys
@@ -171,7 +167,7 @@ This layout should also be usable (but not optimized) for class 2
 language keymaps. In this usage, the open and close bracket keys will be above
 and below the home row respectively, in the rightmost column.
 
-### aliases-abg-orphans-ngetal2.h
+### orphans-class2.h
 
 For class 2 language keymaps, such as Colemak, and those QWERTY
 keymaps (English, Dutch, programmer Polish) that normally have square
@@ -180,7 +176,7 @@ square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
-### aliases-abg-orphans-latam.h
+### orphans-class3.h
 
 For class 3 language keymaps, such as Latin American Spanish, which have
 square brackets on the two keys to the right of `JKL<something>`. This
@@ -188,14 +184,14 @@ layout moves the square brackets to the keys between `5` and `6`.
 The key immediately to the left of `Backspace` is swapped to the left
 hand.
 
-### aliases-abg-orphans-brazil.h
+### orphans-class4.h
 
 For class 4 language keymaps, such as Brazilian Portugese, which have
 square brackets on the two keys to the left of `Enter`, above and below.
 This layout moves the square brackets to the two
 keys directly below `Prog`, and backtick goes to the right of `5`.
 
-### aliases-abg-orphans-japan.h
+### orphans-class4j.h
 
 Brackets treated as per `brazil`, but also supports the Japanese keys
 `Ro` and `Yen` at the expense of
@@ -206,7 +202,7 @@ The two keys between `0` and `Yen` go to between `5` and `6`.
 This option should be used in conjuction with the `japan` modifiers
 option (see below).
 
-### aliases-abg-orphans-merlin3.h
+### orphans-class5.h
 
 For class 5 language keymaps (e.g. European Spanish, Swiss German/French,
 Canadian French), which have square and curly brackets separated on the
@@ -232,11 +228,11 @@ although there are a few obvious choices such as placing the space
 key under one of the thumbs. A small number of reasonable alternatives
 are maintained here.
 
-### aliases-std-modifiers.h
+### modifiers.h
 
 * The stock firmware layout is implemented
 
-### aliases-abg-modifiers.h
+### modifiers-friendly.h
 
 * The thumb buttons and butterfly key are rearranged:
 
@@ -245,22 +241,22 @@ are maintained here.
 	* The Shift keys (L/R THUMB_3) become Left-Alt and Right-Alt (=AltGr)
 		This better facilitates touch-typing with AltGr
 
-### aliases-abg-modifiers-thumb-enter.h
+### modifiers-thumb-enter.h
 
 * As above, but right THUMB_2 is now Enter/Return, and Del is mapped
 	where Enter was.
 
-### aliases-abg-modifiers-japan.h
+### modifiers-japan.h
 
-* As `abg-modifiers` above, but the Japanese input keys `Kana`,
+* As `modifiers-friendly` above, but the Japanese input keys `Kana`,
 	`Henkan` and `Muhenkan` are placed under the thumbs, at the expense of
 	only having one key each for `Shift`, `Control` and `Alt`.
 
 The layer definitions
 =====================
 
-Base layer with orphans-merlin2 and modifiers-abg (US-international)
--------------------------------------------------------------------
+Primary layer with orphans-class1 and modifiers-friendly (US-international)
+------------------------------------------------------------------------
 
 ```
 Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
@@ -270,8 +266,8 @@ Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
-ABG Numpad Apple
-----------------
+Numpad Apple
+------------
 
 ```
 ___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
@@ -281,24 +277,24 @@ End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
             ___ ___ ___ ___    ___ ___ 0   .
 ```
 
-ABG Function Inverted-T
------------------------
+Function Inverted-T
+-------------------
 
 ```
 ___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
 Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
-End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  |   \   Num
+End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ \   |
             ___ Del ___ ___    ___ ___ Ret ___
 ```
 
-ABG Function Minimal Changes
-----------------------------
+Function With Duplicates
+------------------------
 
 ```
 ___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
-Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ Num
+Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ ___
 End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
             ___ Del ___ ___    ___ ___ Ret ___
 ```

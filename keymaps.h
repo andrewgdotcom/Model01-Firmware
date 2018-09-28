@@ -51,16 +51,16 @@
  */
 
 // Use stock modifier key layount
-//include "aliases-std-modifiers.h"
+//#include "modifiers-std.h"
 
 // Use kinesis-style modifier key layout
-#include "aliases-abg-modifiers-thumb-enter.h"
+#include "modifiers-thumb-enter.h"
 
 // Use ABG's friendly modifier layout
-//include "aliases-abg-modifiers.h"
+//#include "modifiers-friendly.h"
 
 // Use Japanese modifier layout
-//include "aliases-abg-modifiers-japan.h"
+//#include "modifiers-japan.h"
 
 /*
  * Choose mouse scrolling behaviour
@@ -68,41 +68,42 @@
  */
 
 // Use traditional mouse scrolling
-#include "aliases-abg-scroll-wheel-traditional.h"
+#define SCROLL_UP Key_mouseScrollUp
+#define SCROLL_DOWN Key_mouseScrollDn
 
 // Use "natural" mouse scrolling
-//include "aliases-abg-scroll-wheel-natural.h"
-
+//#define SCROLL_UP Key_mouseScrollDn
+//#define SCROLL_DOWN Key_mouseScrollUp
 
 /*
  * Choose the arrangement of the orphan keys
- * These are referred to by the qwerty-paramaterized layer
+ * These are referred to by the primary-paramaterized layer
  */
 
 // Use merlin's second orphan key set for Class 1 QWERTY and non-QWERTY keymaps
 // (Dvorak, AZERTY, BEPO, QWERTZ, Turkish F/Q, Canadian Multilingual, Italian, Nordic)
-#include "aliases-abg-orphans-merlin2.h"
+#include "orphans-class1.h"
 
-// Use ngetal's variation on merlin's orphan keys for Class 2 QWERTY keymaps
+// Use ngetal's amendment to merlin's orphan keys for Class 2 QWERTY keymaps
 // (International English, Dutch, Programmer Polish)
-//include "aliases-abg-orphans-ngetal2.h"
+//#include "orphans-class2.h"
 
 // Use Latin American Spanish orphan keys for Class 3 QWERTY keymaps
-//include "aliases-abg-orphans-latam.h"
+//#include "orphans-class3.h"
 
 // Use Brazilian orphan keys for Class 4 QWERTY keymaps (Brazilian Portugese)
-//include "aliases-abg-orphans-brazil.h"
+//#include "orphans-class4.h"
 
 // Use Japanese orphan keys.
 // If you enable this, you should also enable "modifiers-japan" above.
-//include "aliases-abg-orphans-japan.h"
+//#include "orphans-class4j.h"
 
 // Use merlin's third orphan key set for Class 5 QWERTY keymaps
 // (European Spanish, Swiss French/German, Canadian French)
-//include "aliases-abg-orphans-merlin3.h"
+//#include "orphans-class5.h"
 
 // Use stock orphan key set
-//include "aliases-std-orphans.h"
+//#include "orphans-std.h"
 
 
 /*
@@ -117,9 +118,9 @@ enum { PRIMARY, NUMPAD, FUNCTION }; // layers
  */
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
-#include "layer-std-qwerty-parameterized.h"
+#include "layer-primary-parameterized.h"
 ,
-#include "layer-abg-numpad-apple.h"
+#include "layer-numpad-apple.h"
 ,
-#include "layer-abg-function-inverted-t.h"
+#include "layer-function-inverted-t.h"
 };
