@@ -177,8 +177,8 @@ a non-US backslash key (the extra key to the right of left-shift).
 
 ### orphans-class1.h
 
-For class 1 language keymaps, e.g. Dvorak, AZERTY, QWERTZ, Turkish F, and those
-QWERTY languages that normally have letters but no brackets on the keys
+For class 1 language keymaps, e.g. Dvorak, AZERTY, BÉPO, QWERTZ, Turkish F, and
+those QWERTY languages that normally have letters but no brackets on the keys
 to the right of `UIOP` and `JKL<something>` (e.g. Canadian CSA
 Multilingual, Italian, Nordic, Turkish Q).
 This layout moves the two keys to the right of `0` (brackets in some
@@ -186,11 +186,31 @@ keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
-This layout should also be usable (but not optimized) for class 2
+#### Behaviour under a Dvorak OS layout:
+
+```
+Prg &1  é2  '3  "4  (5  )°     =+  -6  è7  _8  ç9  à0  Num
+`~  '"  ,<  .>  P   Y   Tab    Ret F   G   C   R   L   /?
+\|  A   O   E   U   I              D   H   T   N   S   -_
+<>  ;:  Q   J   K   X   Esc    Cmd B   M   W   V   Z   =+
+            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
+```
+
+#### Behaviour under an AZERTY OS layout:
+
+```
+Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
+²   A   Z   E   R   T   Tab    Ret Y   U   I   O   P   ^¨
+*µ  Q   S   D   F   G              H   J   K   L   M   ù%
+<>  W   X   C   V   B   Esc    Cmd N   ,?  ;.  :/  !§  $£
+            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
+```
+
+This class 1 layout should also be usable (but not optimized) for class 2
 language keymaps. In this usage, the open and close bracket keys will be above
 and below the home row respectively, in the rightmost column.
 
-Behaviour under a US-international OS layout is:
+#### Behaviour under a US-international OS layout:
 
 ```
 Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
@@ -209,7 +229,7 @@ square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
-Behaviour under a US-international OS layout is:
+#### Behaviour under a US-international OS layout:
 
 ```
 Prg 1!  2@  3#  4$  5%  [{     }]  6^  7&  8*  9(  0)  Num
