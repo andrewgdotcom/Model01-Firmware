@@ -5,9 +5,9 @@ This repository contains alternative layer files that vary the default
 keyboardio firmware layout to make multilingual typing more intuitive and
 fix a selection of annoyances.
 
-While the modifications can be applied individually, it is recommended that
-layer-function-std should only be used if orphans-std is enabled, otherwise the
-keys `PgUp`, `PgDn` and `LED` may become inaccessible.
+While the modifications can be mixed and matched, it is recommended that
+`layer-function-std.h` should only be used if `orphans-std.h` is enabled,
+otherwise the keys `PgUp`, `PgDn` and `LED` may become inaccessible.
 
 How to use
 ----------
@@ -16,7 +16,7 @@ Follow the instructions in the [README.md](README.md) file, but instead of cloni
 `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
-To enable/disable the modifications, edit the include directives in
+To enable/disable particular layout variants, edit the include directives in
 `keymaps.h`.
 
 The Changes
