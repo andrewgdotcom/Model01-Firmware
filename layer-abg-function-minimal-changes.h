@@ -1,8 +1,8 @@
 // Define the ABG Minimal Changes function layer
 
 /* This layer contains the extra keys PgUp, PgDn and Num that are missing from
- * the ABG multilingual layer. It is otherwise identical to the standard 
- * function layer. It is strongly recommended that if the ABG multilingual 
+ * the ABG multilingual layer. It is otherwise identical to the standard
+ * function layer. It is strongly recommended that if the ABG multilingual
  * layer is enabled, one of the ABG function layers be used in place of the
  * standard layer.
  */
@@ -12,7 +12,7 @@
  */
 // *INDENT-OFF*
 
-KEYMAP_STACKED
+  [FUNCTION] = KEYMAP_STACKED
   (Key_Backtick, Key_F1,           Key_F2,      Key_F3,       Key_F4,        Key_F5,           Key_LEDEffectNext,
    Key_Tab,      ___,              Key_mouseUp, Key_PageUp,   Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
    Key_Home,     Key_mouseL,       Key_mouseDn, Key_mouseR,   Key_mouseBtnL, Key_mouseWarpNW,

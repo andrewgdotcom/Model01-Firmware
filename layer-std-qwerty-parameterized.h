@@ -9,7 +9,7 @@
  */
 // *INDENT-OFF*
 
-KEYMAP_STACKED
+  [PRIMARY] = KEYMAP_STACKED
   (LEFT_OF_1,     Key_1, Key_2, Key_3, Key_4, Key_5, RIGHT_OF_5,
    LEFT_OF_Q,     Key_Q, Key_W, Key_E, Key_R, Key_T, MOD_L_MIDDLE,
    LEFT_OF_A,     Key_A, Key_S, Key_D, Key_F, Key_G,

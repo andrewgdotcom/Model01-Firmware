@@ -117,10 +117,9 @@ enum { PRIMARY, NUMPAD, FUNCTION }; // layers
  */
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
-  [PRIMARY] =
 #include "layer-std-qwerty-parameterized.h"
-  , [NUMPAD] =
+,
 #include "layer-abg-numpad-apple.h"
-  , [FUNCTION] =
+,
 #include "layer-abg-function-inverted-t.h"
 };
