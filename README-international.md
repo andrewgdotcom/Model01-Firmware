@@ -236,7 +236,7 @@ keys directly below `Prog`, and backtick goes to the right of `5`.
 
 ### orphans-class4j.h
 
-Brackets treated as per `brazil`, but also supports the Japanese keys
+Brackets treated as per `class4`, but also supports the Japanese keys
 `Ro` and `Yen` at the expense of
 moving backtick (used as `Zenkaku/Hankaku`) into the function layer.
 The key `Yen` moves to the bottom left corner.
