@@ -63,14 +63,13 @@ The Function Layer
 * Arrow keys are homed as an inverted-T under "IJKL", rather than in `vi` format.
 	* Right-curlybrace is moved to C14R2 (semicolon)
 
-* Mousekeys are properly homed as an inverted-T under the first three fingers.
-	The warp buttons are arranged in a square around the inverted-T.
-	Left-button is under the left pinky so that it can be held down easily
-	for drag and drop while the inverted-T and warp buttons are operated by
-	the first three fingers. Right and middle buttons are placed by analogy.
-	Insert is displaced, and is relocated under "B" to be close to Delete.
+* Mousekeys are properly homed as an inverted-T under "ESDF".
+	* The warp buttons are arranged in a square around the inverted-T ("WRXV").
+	* Left-button is under "A" for ease of dragging with the mousekeys.
+	* Right and middle buttons are placed by analogy on "C" and "G".
+	* Insert is displaced, and is relocated under "B" to be close to Delete.
 
-* Mouse scroll keys are added - traditional or "natural" scrolling is
+* Mouse scroll keys under "W" and "X" - traditional or "natural" scrolling is
 	configurable by defining the macros SCROLL_UP and SCROLL_DOWN in keymaps.h.
 
 The Primary Layer
