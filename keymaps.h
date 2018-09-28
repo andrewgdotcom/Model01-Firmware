@@ -50,21 +50,14 @@
  * Choose modifier key layout
  */
 
-// Use stock modifier key layount
 //#include "modifiers-std.h"
-
-// Use kinesis-style modifier key layout
 #include "modifiers-thumb-enter.h"
-
-// Use the altgr-friendly modifier layout
 //#include "modifiers-altgr.h"
-
-// Use Japanese modifier layout
 //#include "modifiers-japan.h"
 
 /*
  * Choose mouse scrolling behaviour
- * Note: mouse scrolling is not enabled in standard layers
+ * Note: mouse scrolling is only enabled in "layer-function-inverted-t.h"
  */
 
 // Use traditional mouse scrolling
@@ -78,33 +71,16 @@
 /*
  * Choose the arrangement of the orphan keys
  * These are referred to by the primary-paramaterized layer
+ * If you enable class4j, you should also enable "modifiers-japan.h" above.
  */
 
-// Use merlin's second orphan key set for Class 1 QWERTY and non-QWERTY keymaps
-// (Dvorak, AZERTY, BEPO, QWERTZ, Turkish F/Q, Canadian Multilingual, Italian, Nordic)
-#include "orphans-class1.h"
-
-// Use ngetal's amendment to merlin's orphan keys for Class 2 QWERTY keymaps
-// (International English, Dutch, Programmer Polish)
-//#include "orphans-class2.h"
-
-// Use Latin American Spanish orphan keys for Class 3 QWERTY keymaps
-//#include "orphans-class3.h"
-
-// Use Brazilian orphan keys for Class 4 QWERTY keymaps (Brazilian Portugese)
-//#include "orphans-class4.h"
-
-// Use Japanese orphan keys.
-// If you enable this, you should also enable "modifiers-japan" above.
-//#include "orphans-class4j.h"
-
-// Use merlin's third orphan key set for Class 5 QWERTY keymaps
-// (European Spanish, Swiss French/German, Canadian French)
-//#include "orphans-class5.h"
-
-// Use stock orphan key set
 //#include "orphans-std.h"
-
+#include "orphans-class1.h"
+//#include "orphans-class2.h"
+//#include "orphans-class3.h"
+//#include "orphans-class4.h"
+//#include "orphans-class4j.h"
+//#include "orphans-class5.h"
 
 /*
  * Define our layer names. These must match the layer structure below.
