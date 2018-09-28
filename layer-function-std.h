@@ -1,5 +1,3 @@
-// Define the standard function layer
-
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
  */

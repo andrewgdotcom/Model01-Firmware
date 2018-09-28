@@ -1,16 +1,9 @@
-// Define the ABG Apple numpad layer
-
-/* This layer leaves the rightmost column as passthrough. It is expected that
- * Num is located under one of these keys in a lower layer.
- *
- * This layer is recommended for use with both std and abg base layers.
- *
- * The numpad is moved to be properly homed under the right hand. Zero is moved
+/* The numpad is moved to be properly homed under the right hand. Zero is moved
  * to the thumb as per Kinesis. The usual non-numeric keys are arranged around
  * the tenkey in an Apple standard layout. This should be broadly compatible.
  *
  * Extra arrow keys are provided in an inverted-T under the left hand. The non-
- * mouse keys from the left hand of abg-function-inverted-t are also duplicated.
+ * mouse keys from the left hand of layer-function-inverted-t are also duplicated.
  */
 
 /* This comment temporarily turns off astyle's indent enforcement

@@ -1,10 +1,8 @@
-// Define the ABG Minimal Changes function layer
-
 /* This layer contains the extra keys PgUp, PgDn and Num that are missing from
- * the ABG multilingual layer. It is otherwise identical to the standard
- * function layer. It is strongly recommended that if the ABG multilingual
- * layer is enabled, one of the ABG function layers be used in place of the
- * standard layer.
+ * the parameterized primary layer. It is otherwise identical to the standard
+ * function layer. It is strongly recommended that if the parameterized primary
+ * layer is enabled, one of the modified function layers be used instead of the
+ * standard function layer.
  */
 
 /* This comment temporarily turns off astyle's indent enforcement

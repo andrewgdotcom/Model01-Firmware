@@ -1,7 +1,7 @@
-brazil orphans
-===============
+Class 4 orphans (brazil)
+========================
 
-`brazil` is a firmware layout optimised for class 4 OS keymaps,
+This defines a firmware layout optimised for class 4 OS keymaps,
 which have square and curly brackets on both the second row and home row.
 
 In clockwise order from the bottom left, the orphan keys are mapped
@@ -16,7 +16,7 @@ Orphan key locations
 
 The orphan keys are found in these physical locations on the Model01:
 
-LH column 0	|...|LH column 6|RH column 7|...|RH column 15	
+LH column 0	|...|LH column 6|RH column 7|...|RH column 15
 ------------|---|-----------|-----------|---|--------------
 PROG		|...|RIGHT_OF_5 | LEFT_OF_6	|...| NUM
 LEFT_OF_Q	|...|...		|...		|...| RIGHT_OF_P

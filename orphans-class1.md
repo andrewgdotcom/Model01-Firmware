@@ -1,7 +1,7 @@
-merlin2 orphans
-===============
+Class 1 orphans (merlin2)
+=========================
 
-`merlin2` is a firmware layout optimised for class 1 OS keymaps,
+This defines a firmware layout optimised for class 1 OS keymaps,
 which have square and curly brackets on the number row.
 
 Class 1 keymaps often have accented letters on R(P) and R(;) that must
@@ -19,7 +19,7 @@ en_US@dvorak| <>|\\&#124;| `~	| [{	| ]}	| /?	| -_	| =+
 it_IT@alt| <>	| ù§	|\\&#124;| '?	| ì^	| èé	| à°`	| +*~
 se_SE	|<>&#124;| '*	| §½	| +?\	| ´`	| åÅ	| äÄ	| ¨^~
 
-`merlin2` is also usable with some class 2 OS keymaps, 
+This is also usable with some class 2 OS keymaps,
 which have square and curly brackets on the first letter row, e.g.:
 
 Keymap	| L(Z)	| L(A)	| L(Q)	| R(5)	| L(6)	| R(P)	| R(;)	| R(/)
@@ -32,7 +32,7 @@ Orphan key locations
 
 The orphan keys are found in these physical locations on the Model01:
 
-LH column 0	|...|LH column 6|RH column 7|...|RH column 15	
+LH column 0	|...|LH column 6|RH column 7|...|RH column 15
 ------------|---|-----------|-----------|---|--------------
 PROG		|...|RIGHT_OF_5 | LEFT_OF_6	|...| NUM
 LEFT_OF_Q	|...|...		|...		|...| RIGHT_OF_P

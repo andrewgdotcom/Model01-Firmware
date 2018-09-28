@@ -1,5 +1,5 @@
-ABG firmware variant layout
-===========================
+Extended Model01 firmware variant layouts
+=========================================
 
 This repository contains alternative layer files that vary the default
 keyboardio firmware layout to make multilingual typing more intuitive and

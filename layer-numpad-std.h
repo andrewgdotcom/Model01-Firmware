@@ -1,4 +1,3 @@
-// Define the standard numpad layer
 /* This comment temporarily turns off astyle's indent enforcement
  *   so we can make the keymaps actually resemble the physical key layout better
  */

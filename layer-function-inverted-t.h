@@ -1,9 +1,4 @@
-// Define the ABG inverted-T function layer
-
-/* This layer contains extra PgUp, PgDn and Num keys, so is recommended for use
- * in combination with the ABG multilingual base layer.
- *
- * In this layer, we move mouse keys to a homed, inverted-T position under the
+/* In this layer, we move mouse keys to a homed, inverted-T position under the
  * left hand, and arrange warp keys in a square around them. The left mouse
  * button is under the left pinky, so it can be held down easily for drag and
  * drop; the other mouse buttons are located by analogy. Insert is therefore

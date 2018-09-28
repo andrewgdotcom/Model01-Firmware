@@ -1,7 +1,7 @@
-ngetal2 orphans
-===============
+Class 2 orphans (ngetal2)
+========================
 
-`ngetal2` is a firmware layout optimised for class 2 OS keymaps,
+This defines a firmware layout optimised for class 2 OS keymaps,
 which have square and curly brackets on the first letter row.
 
 In clockwise order from the bottom left, the orphan keys are mapped
@@ -19,7 +19,7 @@ Orphan key locations
 
 The orphan keys are found in these physical locations on the Model01:
 
-LH column 0	|...|LH column 6|RH column 7|...|RH column 15	
+LH column 0	|...|LH column 6|RH column 7|...|RH column 15
 ------------|---|-----------|-----------|---|--------------
 PROG		|...|RIGHT_OF_5 | LEFT_OF_6	|...| NUM
 LEFT_OF_Q	|...|...		|...		|...| RIGHT_OF_P
