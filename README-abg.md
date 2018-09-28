@@ -1,7 +1,7 @@
 ABG firmware variant layout
 ===========================
 
-This repository contains alternative layer files that vary the default 
+This repository contains alternative layer files that vary the default
 keyboardio firmware layout to make multilingual typing more intuitive and
 fix a selection of annoyances.
 
@@ -17,7 +17,7 @@ Follow the instructions in the [README.md](README.md) file, but instead of cloni
 `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
-To enable/disable the modifications, edit the include directives in 
+To enable/disable the modifications, edit the include directives in
 `keymaps.h`.
 
 The Changes
@@ -74,7 +74,7 @@ The Function Layer
 	the first three fingers. Right and middle buttons are placed by analogy.
 	Insert is displaced, and is relocated under "B" to be close to Delete.
 
-* Mouse scroll keys are added - traditional or "natural" scrolling is 
+* Mouse scroll keys are added - traditional or "natural" scrolling is
 	configurable by the `aliases-abg-scroll-wheel-*` include files.
 
 The Base Layer
@@ -114,7 +114,7 @@ require more scancodes than the default firmware layout provides, at
 least three keys must be moved to the function layer. See
 "The Function Layer" above.
 
-The orphan key arrangements supported here are designed using the 
+The orphan key arrangements supported here are designed using the
 principle of least surprise. This means that any changes from a
 standard keyboard should present the minimum amount of confusion to a
 user familiar with a standard keyboard layout (of whatever language).
@@ -321,3 +321,10 @@ End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
             ___ Del ___ ___    ___ ___ Ret ___
 ```
 
+Contributors
+============
+
+* Andrew Gallagher (abg)
+* Yoann Brosseau (celtic)
+* Michael Richters (merlin)
+* Imre Kószó (ngetal)
