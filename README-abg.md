@@ -214,24 +214,6 @@ four keys to the left of `Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
 `Num`. Backtick goes to the right of `5`.
 
-### Obsolete keymaps
-
-The following keymaps are no longer recommended, as they require the
-`Num` key to be moved to the function layer. They are still usable, so
-long as one of the nonstandard function layers above is enabled.
-
-#### aliases-abg-orphans-abg.h
-
-The original ABG/Celtic international layout for class 1 and 2 keymaps.
-This is the same as `merlin2`, except that the top-right keys go to
-`Any` and `Num` instead of `LED` and `Any`.
-
-#### aliases-abg-orphans-spanish.h
-
-For class 5 keymaps. This is similar to `orphans-abg` except that the
-Spanish closing bracket keys are located on the top right and bottom
-right corner keys. The key to the left of `Backspace` is swapped to the
-left hand.
 
 Modifiers
 ---------
