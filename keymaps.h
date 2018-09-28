@@ -56,8 +56,8 @@
 // Use kinesis-style modifier key layout
 #include "modifiers-thumb-enter.h"
 
-// Use ABG's friendly modifier layout
-//#include "modifiers-friendly.h"
+// Use the altgr-friendly modifier layout
+//#include "modifiers-altgr.h"
 
 // Use Japanese modifier layout
 //#include "modifiers-japan.h"

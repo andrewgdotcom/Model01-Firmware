@@ -231,14 +231,13 @@ are maintained here.
 
 * The stock firmware layout is implemented
 
-### modifiers-friendly.h
+### modifiers-altgr.h
 
-* The thumb buttons and butterfly key are rearranged:
+* Thumb and butterfly keys are permuted to make Shift+AltGr more comfortable:
 
 	* Butterfly is now Command/GUI
 	* Command/GUI and Alt (L/R THUMB_2) become the Shift keys
 	* The Shift keys (L/R THUMB_3) become Left-Alt and Right-Alt (=AltGr)
-		This better facilitates touch-typing with AltGr
 
 ### modifiers-thumb-enter.h
 
@@ -247,14 +246,14 @@ are maintained here.
 
 ### modifiers-japan.h
 
-* As `modifiers-friendly` above, but the Japanese input keys `Kana`,
+* As `modifiers-altgr` above, but the Japanese input keys `Kana`,
 	`Henkan` and `Muhenkan` are placed under the thumbs, at the expense of
 	only having one key each for `Shift`, `Control` and `Alt`.
 
 The layer definitions
 =====================
 
-Primary layer with orphans-class1 and modifiers-friendly (US-international)
+Primary layer with orphans-class1 and modifiers-altgr (US-international)
 ------------------------------------------------------------------------
 
 ```
