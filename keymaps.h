@@ -75,7 +75,7 @@
 
 
 /*
- * Choose the arrangement of the orphan keys 
+ * Choose the arrangement of the orphan keys
  * These are referred to by the qwerty-paramaterized layer
  */
 
@@ -109,7 +109,7 @@
  * Define our layer names. These must match the layer structure below.
  */
 
-enum { QWERTY, NUMPAD, FUNCTION }; // layers
+enum { PRIMARY, NUMPAD, FUNCTION }; // layers
 
 /*
  * Enable and disable layers by editing the various include directives below.
@@ -117,11 +117,10 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
  */
 
 const Key keymaps[][ROWS][COLS] PROGMEM = {
-  [QWERTY] =
+  [PRIMARY] =
 #include "layer-std-qwerty-parameterized.h"
   , [NUMPAD] =
 #include "layer-abg-numpad-apple.h"
   , [FUNCTION] =
 #include "layer-abg-function-inverted-t.h"
 };
-
