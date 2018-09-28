@@ -36,6 +36,14 @@ The Numpad Layer
 	the keypad generated `Equals` (which varies with OS keymap) rather than
 	the more invariant code `KP_Equals`, and also adds an extra `Backspace` key.
 
+```
+___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
+Tab ___ ___ Up  ___ ___ PUp    ___ ___ 7   8   9   -   ___
+Hom ___ Le  Dn  Ri  ___            Bs  4   5   6   +   ___
+End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
+            ___ ___ ___ ___    ___ ___ 0   .
+```
+
 The Function Layer
 ------------------
 
@@ -51,6 +59,14 @@ The Function Layer
 	* Page Up/Down keys are duplicated on Fn-E and Fn-C.
 	* LED is duplicated on Fn-LED
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
+
+```
+___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
+Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
+Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ ___
+End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
+            ___ Del ___ ___    ___ ___ Ret ___
+```
 
 ### layer-function-inverted-t.h
 
@@ -71,6 +87,14 @@ The Function Layer
 
 * Mouse scroll keys under "W" and "X" - traditional or "natural" scrolling is
 	configurable by defining the macros SCROLL_UP and SCROLL_DOWN in keymaps.h.
+
+```
+___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
+Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
+Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
+End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ \   |
+            ___ Del ___ ___    ___ ___ Ret ___
+```
 
 The Primary Layer
 =================
@@ -166,6 +190,16 @@ This layout should also be usable (but not optimized) for class 2
 language keymaps. In this usage, the open and close bracket keys will be above
 and below the home row respectively, in the rightmost column.
 
+Behaviour under a US-international OS layout is:
+
+```
+Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
+`~  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   [{
+\|  A   S   D   F   G              H   J   K   L   ;:  '"
+<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  ]}
+            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
+```
+
 ### orphans-class2.h
 
 For class 2 language keymaps, such as Colemak, and those QWERTY
@@ -174,6 +208,16 @@ brackets on the two keys to the right of `P`. This layout moves the
 square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
+
+Behaviour under a US-international OS layout is:
+
+```
+Prg 1!  2@  3#  4$  5%  [{     }]  6^  7&  8*  9(  0)  Num
+`~  Q   W   E   R   T   Tab    Del Y   U   I   O   P   -_
+\|  A   S   D   F   G              H   J   K   L   ;:  '"
+<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  =+
+            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+```
 
 ### orphans-class3.h
 
@@ -250,52 +294,6 @@ are maintained here.
 	`Henkan` and `Muhenkan` are placed under the thumbs, at the expense of
 	only having one key each for `Shift`, `Control` and `Alt`.
 
-The layer definitions
-=====================
-
-Primary layer with orphans-class1 and modifiers-altgr (US-international)
-------------------------------------------------------------------------
-
-```
-Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
-`~  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   [{
-\|  A   S   D   F   G              H   J   K   L   ;:  '"
-<>  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  ]}
-            Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
-```
-
-Numpad Apple
-------------
-
-```
-___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
-Tab ___ ___ Up  ___ ___ PUp    ___ ___ 7   8   9   -   ___
-Hom ___ Le  Dn  Ri  ___            Bs  4   5   6   +   ___
-End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
-            ___ ___ ___ ___    ___ ___ 0   .
-```
-
-Function Inverted-T
--------------------
-
-```
-___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
-Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
-Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
-End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ \   |
-            ___ Del ___ ___    ___ ___ Ret ___
-```
-
-Function With Duplicates
-------------------------
-
-```
-___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
-Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
-Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ ___
-End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
-            ___ Del ___ ___    ___ ___ Ret ___
-```
 
 Contributors
 ============
