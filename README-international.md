@@ -61,7 +61,7 @@ The Function Layer
 	* Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
 
 ```
-___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
+`~  F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
 Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ ___
 End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
@@ -85,11 +85,11 @@ End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
 	* Right and middle buttons are placed by analogy on "C" and "G".
 	* Insert is displaced, and is relocated under "B" to be close to Delete.
 
-* Mouse scroll keys under "W" and "X" - traditional or "natural" scrolling is
+* Mouse scroll keys under "Q" and "Z" - traditional or "natural" scrolling is
 	configurable by defining the macros SCROLL_UP and SCROLL_DOWN in keymaps.h.
 
 ```
-___ F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
+`~  F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ScU MNW MUp MNE MWE PUp    Pla Nxt {   Up  [   ]   F12
 Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  }   ___
 End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ \   |
@@ -146,9 +146,9 @@ paired side by side, classes 1, 2 and 3) or the two keys directly
 below `Prog` on the left hand side (classes 4 and 5).
 
 * Class 1: brackets on the first (number) row or no paired brackets
-	(Dvorak, AZERTY, QWERTZ, Canadian Multilingual, Italian alternative, Nordic, Turkish Q/F)
+	(Dvorak, AZERTY, BÉPO, QWERTZ, Canadian Multilingual, Italian alternative, Nordic, Turkish Q/F)
 * Class 2: brackets on the second row, to the right of `UIOP`
-	(English QWERTY, Dutch, Italian, programmer Polish)
+	(English QWERTY, Colemak, Dutch, Italian, programmer Polish)
 * Class 3: brackets on the third row, to the right of `JKL<something>`
 	(Latin American Spanish)
 * Class 4: opening and closing brackets above and below each other, immediately to the left of `Enter`
@@ -186,7 +186,7 @@ keymaps) to the keys between `5` and `6` (labelled `LED`, `Any`).
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
-#### Behaviour under a Dvorak OS layout:
+#### Behaviour under a Dvorak OS layout, with modifiers-altgr:
 
 ```
 Prg &1  é2  '3  "4  (5  )°     =+  -6  è7  _8  ç9  à0  Num
@@ -196,7 +196,7 @@ Prg &1  é2  '3  "4  (5  )°     =+  -6  è7  _8  ç9  à0  Num
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
-#### Behaviour under an AZERTY OS layout:
+#### Behaviour under an AZERTY OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
@@ -210,7 +210,7 @@ This class 1 layout should also be usable (but not optimized) for class 2
 language keymaps. In this usage, the open and close bracket keys will be above
 and below the home row respectively, in the rightmost column.
 
-#### Behaviour under a US-international OS layout:
+#### Behaviour under a US-international OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
@@ -229,7 +229,7 @@ square brackets to the keys between `5` and `6`.
 The key immediately above right-shift is swapped to the left hand,
 on the same row.
 
-#### Behaviour under a US-international OS layout:
+#### Behaviour under a US-international OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2@  3#  4$  5%  [{     }]  6^  7&  8*  9(  0)  Num
@@ -246,7 +246,7 @@ square brackets on the two keys to the right of `JKL<something>`. This
 layout moves the square brackets to the keys between `5` and `6`. The key
 immediately below and to the left of `Backspace` is swapped to the left hand.
 
-#### Behaviour under a Latin American OS layout:
+#### Behaviour under a Latin American OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2"  3#  4$  5%  {[     ]}  6&  7/  8(  9)  0=  Num
@@ -263,7 +263,7 @@ square brackets on the two keys to the left of `Enter`, above and below.
 This layout moves the square brackets to the two keys directly below `Prog`,
 and the top left key (backtick in US_ASCII) goes to the right of `5`.
 
-#### Behaviour under a Brazilian Portugese OS layout:
+#### Behaviour under a Brazilian Portugese OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2@  3#  4$  5%  '"     -_  6¨  7&  8*  9(  0)  Num
@@ -283,14 +283,14 @@ The two keys between `0` and `Yen` go to between `5` and `6`.
 This option should be used in conjuction with the `japan` modifiers
 option (see below).
 
-#### Behaviour under a Japanese OS layout:
+#### Behaviour under a Japanese OS layout, with modifiers-japan:
 
 ```
 Prg 1!  2?  3#  4$  5%  -=     ^¯  6&  7'  8(  9)  0~  Num
-[{  Q   W   E   R   T   Tab    Del Y   U   I   O   P   @`
+[{  Q   W   E   R   T   Tab    Ret Y   U   I   O   P   @`
 }]  A   S   D   F   G              H   J   K   L   ;+  :*
 ¥|  Z   X   C   V   B   Esc    Cmd N   M   ,<  .>  /?  \_
-            Ctl Bs  Sh  Alt    Alt Ret Sp  Ctl
+            Ctl Bs  Sh  MuH    Alt Kna Sp  Hen
 ```
 
 ### orphans-class5.h
@@ -301,7 +301,7 @@ four keys to the left of `Enter`. This layout moves the opening brackets to
 the keys below `Prog` and leaves the closing brackets on the keys below
 `Num`. `ºª` (backtick in US_ASCII) goes to the right of `5`.
 
-#### Behaviour under a European Spanish OS layout:
+#### Behaviour under a European Spanish OS layout, with modifiers-altgr:
 
 ```
 Prg 1!  2"  3·  4$  5%  ºª     '?  6&  7/  8(  9)  0=  Num
