@@ -50,7 +50,6 @@ The Function Layer
 ### layer-function-std.h
 
 * The stock firmware function layer is implemented
-* LED is duplicated on Fn-LED
 
 ### layer-function-with-duplicates.h
 
