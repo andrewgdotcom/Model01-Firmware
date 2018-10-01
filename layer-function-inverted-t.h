@@ -5,7 +5,8 @@
  * displaced, and moves to Fn-B, close to Delete.
  *
  * Similarly, on the right hand we move the arrow keys to a homed inverted-T.
- * This displaces the magic RightCurlyBracket.
+ * Since the parameterised primary layer contains a full set of keys, we
+ * repurpose the magic symbols for CapsLock, ScrollLock, Pause/Break and SysRq
  */
 
 /* This comment temporarily turns off astyle's indent enforcement
@@ -21,10 +22,10 @@
    ___, Key_Delete, ___, ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,               Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LeftCurlyBracket,     Key_UpArrow,              Key_LeftBracket, Key_RightBracket,      Key_F12,
-                               Key_PrintScreen,        Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  Key_RightCurlyBracket, ___,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,         Key_Pipe,
+   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,   Key_F11,
+   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_CapsLock,             Key_UpArrow,              Key_ScrollLock,  Key_Pause, Key_F12,
+                               Key_PrintScreen,        Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  ___,       ___,
+   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             ___,       Key_Sysreq,
    ___, ___, Key_Enter, ___,
    ___)
 
