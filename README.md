@@ -105,14 +105,14 @@ After that, you'll want to update the Kaleidoscope libraries.
 
 ### MacOS
 ```sh
-cd $HOME/Documents/Arduino/hardware/keyboardio/avr
+cd $HOME/Documents/Arduino/hardware/keyboardio
 make update-submodules
 ```
 
 ### Linux
 
 ```sh
-cd $HOME/Arduino/hardware/keyboardio/avr
+cd $HOME/Arduino/hardware/keyboardio
 make update-submodules
 ```
 
