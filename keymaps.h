@@ -58,6 +58,7 @@
 
 //#include "modifiers-std.h"
 #include "modifiers-thumb-enter.h"
+//#include "modifiers-thumb-enter-bepo.h"
 //#include "modifiers-altgr.h"
 //#include "modifiers-japan.h"
 
