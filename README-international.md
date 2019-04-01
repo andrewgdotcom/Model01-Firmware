@@ -419,4 +419,5 @@ Contributors
 * Andrew Gallagher (andrewg)
 * Yoann Brosseau (celtic)
 * Michael Richters (merlin)
-* Imre Kószó (ngetal)
+* Imre Kószó (ngetal) - QWERTZ support
+* kalri - BÉPO support
