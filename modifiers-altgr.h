@@ -25,5 +25,5 @@
 #define MOD_R_PALM    ShiftToLayer(FUNCTION)
 
 #define MOD_R_MIDDLE  Key_Enter
-#define MOD_BUTTERFLY Key_RightGui
+#define MOD_BUTTERFLY Key_LeftGui
 
