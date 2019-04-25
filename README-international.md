@@ -1,13 +1,13 @@
 Extended Model01 firmware variant keymaps
 =========================================
 
-This repository contains alternative layer files that vary the default
+This repository contains alternative layer definitions that vary the default
 keyboardio firmware keymap to make multilingual typing more intuitive and
 fix a selection of annoyances.
 
-While the modifications can be mixed and matched, it is recommended that
-`layer-function-std.h` should only be used if `orphans-std.h` is enabled,
-otherwise the keys `PgUp`, `PgDn` and `LED` may become inaccessible.
+While the modifications can be mixed and matched, it is recommended that if
+PRIMARY_KEYMAP_INTERNATIONAL is enabled, FUNCTION_KEYMAP_INVERTED_T should also
+be enabled, otherwise the keys `PgUp`, `PgDn` and `LED` may become inaccessible.
 
 Terminology
 -----------
@@ -60,8 +60,8 @@ modifications.
 How to use
 ----------
 
-Follow the instructions in the [README.md](README.md) file, but instead of cloning
-`keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
+Follow the instructions in the [README.md](README.md) file, but instead of
+cloning `keyboardio/Model01-Firmware`, clone `andrewgdotcom/Model01-Firmware`.
 Otherwise the steps are identical.
 
 To manage the firmware keymap variants, edit the include directives in
@@ -87,25 +87,27 @@ ORP ___ ___ ___ ___ ___ MOD    MOD ___ ___ ___ ___ ___ ORP
 ```
 
 The orphan keys and modifier keys are treated separately because orphan key
-definitions are usually language-limited, whereas modifier keys are a personal
+definitions are usually language-specific, whereas modifier keys are a personal
 taste. A library of orphan and modifier definition files is provided, and one
-of each should be included in the keymaps.h file if using the parameterized
+of each should be enabled in the keymaps.h file when using the international
 primary layout.
 
 
 The Numpad Layer
 ================
 
-### layer-numpad-std.h
+If NUMPAD_KEYMAP_PROPER is undefined, the upstream numpad layer is used.
 
-* The stock firmware numpad layer is implemented
-
-### layer-numpad-apple.h
+### NUMPAD_KEYMAP_PROPER
 
 * Numpad is properly homed as per e.g. Kinesis and implements the standard Apple
-	keypad layout for the non-numeric keys. It also fixes a bug where
-	the keypad generated `Equals` (which varies with OS keymap) rather than
-	the more invariant code `KP_Equals`, and also adds an extra `Backspace` key.
+    keypad layout for the non-numeric keys.
+* Fixes a bug where the keypad generated `Equals` (which varies with OS keymap)
+    rather than the keymap-invariant code `KP_Equals`,
+* Adds an extra `Backspace` key to the left of 4.
+* Reverts the change in commit `04dd094` which replaces the `KP_*` codes to
+    numpad row keycodes, as this breaks under AZERTY.
+* Adds some useful keycodes on the left hand, such as inverted-t arrows.
 
 ```
 ___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
@@ -118,27 +120,9 @@ End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
 The Function Layer
 ==================
 
-### layer-function-std.h
+If FUNCTION_KEYMAP_INVERTED_T is undefined, the upstream function layer is used.
 
-* The stock firmware function layer is implemented
-
-### layer-function-with-duplicates.h
-
-* Duplicate keys are created on the Fn layer to free up space on the base layer:
-
-    * Page Up/Down keys are duplicated on Fn-E and Fn-C.
-    * LED is duplicated on Fn-LED
-    * Backtick (Zenkaku/Hankaku) is duplicated on Fn-Prog
-
-```
-`~  F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
-Tab ___ MUp PUp RBu MWE MNE    Pla Nxt {   }   [   ]   F12
-Hom MLe MDn MRi LBu MNW            Le  Dn  Up  Ri  ___ ___
-End PSc Ins PDn MBu MSW MSE    App Mut V+  V-  ___ \   |
-            ___ Del ___ ___    ___ ___ Ret ___
-```
-
-### layer-function-inverted-t.h
+### FUNCTION_KEYMAP_INVERTED_T
 
 * Duplicate keys are created on the Fn layer to free up space on the base layer:
 
@@ -172,9 +156,12 @@ End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ ___ Sys
 The Primary Layer
 =================
 
-The primary layer is parameterized and controlled by the inclusion of a
-set of alias files. Currently the two supported alias classes are
-`orphans` and `modifiers`. One include file from each class must be
+The upstream primary layers PRIMARY_KEYMAP_QWERTY, PRIMARY_KEYMAP_DVORAK and
+PRIMARY_KEYMAP_COLEMAK are included for compatibility.
+
+The new PRIMARY_KEYMAP_INTERNATIONAL layer is parameterized and controlled by
+uncommenting include directives in the keymaps file. The two supported classes
+are `orphans` and `modifiers`. One include directive from each class must be
 enabled.
 
 Orphans
@@ -263,19 +250,19 @@ on the same row.
 
 ```
 Prg &1  é2  '3  "4{ (5[ )°]    =+} -6  è7  _8  ç9  à0  Num
-`~  '"  ,<  .>  P   Y   Tab    Ret F   G   C   R   L   /?
-\|  A   O   E   U   I              D   H   T   N   S   -_
-<>  ;:  Q   J   K   X   Esc    Cmd B   M   W   V   Z   =+
+²   A   Z   E   R   T   Tab    Ret Y   U   I   O   P   ^¨
+*µ  Q   S   D   F   G              H   J   K   L   M   ù%
+<>  W   X   C   V   B   Esc    Cmd N   ,?  ;.  :/  !§  $£
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
 #### Behaviour under a Dvorak OS layout, with modifiers-altgr:
 
 ```
-Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
-²   A   Z   E   R   T   Tab    Ret Y   U   I   O   P   ^¨
-*µ  Q   S   D   F   G              H   J   K   L   M   ù%
-<>  W   X   C   V   B   Esc    Cmd N   ,?  ;.  :/  !§  $£
+Prg 1!  2@  3#  4$  5%  [{     }]  6^  7&  8*  9(  0)  Num
+`~  '"  ,<  .>  P   Y   Tab    Ret F   G   C   R   L   /?
+\|  A   O   E   U   I              D   H   T   N   S   -_
+<>  ;:  Q   J   K   X   Esc    Cmd B   M   W   V   Z   =+
             Ctl Bs  Sh  Alt    Alt Sh  Sp  Ctl
 ```
 
@@ -295,7 +282,7 @@ Prg 1!  2@  3#  4$  5%  -_     =+  6^  7&  8*  9(  0)  Num
 
 ### orphans-class2.h
 
-For class 2 language keymaps, such as Colemak, and those QWERTY
+For class 2 language keymaps, such as Colemak and those QWERTY
 layouts (English, Dutch, programmer Polish) that normally have square
 brackets on the two keys to the right of `P`. This firmware keymap moves the
 square brackets to the keys between `5` and `6`.
@@ -429,7 +416,8 @@ are maintained here.
 Contributors
 ============
 
-* Andrew Gallagher (abg)
+* Andrew Gallagher (andrewg)
 * Yoann Brosseau (celtic)
 * Michael Richters (merlin)
-* Imre Kószó (ngetal)
+* Imre Kószó (ngetal) - QWERTZ support
+* kalri - BÉPO support
