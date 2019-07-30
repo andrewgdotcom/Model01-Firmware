@@ -233,7 +233,7 @@ KEYMAPS(
    ___,
 
    M(MACRO_VERSION_INFO),  ___,                 Key_KeypadClear, Key_KeypadEquals,   Key_KeypadDivide,   Key_KeypadMultiply, ___,
-   ___,                    ___,                 Key_Keypad7,     Key_Keypad8,        Key_Keypad9,        Key_KeypadSubtract, ___,
+   ___,                    Key_Space,           Key_Keypad7,     Key_Keypad8,        Key_Keypad9,        Key_KeypadSubtract, ___,
                            Key_Backspace,       Key_Keypad4,     Key_Keypad5,        Key_Keypad6,        Key_KeypadAdd,      ___,
    ___,                    Key_KeypadComma,     Key_Keypad1,     Key_Keypad2,        Key_Keypad3,        Key_KeypadEnter,    ___,
    Key_Keypad000, Key_Keypad00, Key_Keypad0, Key_KeypadDot,
