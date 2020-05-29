@@ -1,17 +1,19 @@
 # Keyboardio Model 01 Firmware
 
-## Extended config maintained by Andrew Gallagher (@andrewgdotcom, ABG)
+## International layout extensions maintained by Andrew Gallagher (@andrewgdotcom, ABG)
 
-Please read [README-abg.md](README-abg.md) for a full description of the layout
-extensions. The rest of this file contains build instructions and still
-applies.
+Please read [README-international.md](README-international.md) for a full
+description of the layout extensions. The rest of this file contains build
+instructions and still applies.
+
+----
 
 _The default firmware for the Keyboardio Model 01_
 
 <h3>This is a quick start guide for folks who are familiar with Arduino and prefer to use the command line. For everyone else:
 
- * [Check out the wiki](https://github.com/keyboardio/Kaleidoscope/wiki/Keyboardio-Model-01-Introduction) for a more in depth introduction to how the Model 01 keyboard and the Kaleidoscope firmware work. 
- 
+ * [Check out the wiki](https://github.com/keyboardio/Kaleidoscope/wiki/Keyboardio-Model-01-Introduction) for a more in depth introduction to how the Model 01 keyboard and the Kaleidoscope firmware work.
+
   * If you have questions, [The community forums are happy to help!](https://community.keyboard.io/)</h3>
 
 # Download and install
@@ -36,23 +38,23 @@ If you install Arduino into some place that's /not/ `/usr/local/arduino`, you'll
 ### MacOS
 ```sh
 mkdir -p $HOME/Documents/Arduino
-cd $HOME/Documents/Arduino 
+cd $HOME/Documents/Arduino
 ```
 
 ### Linux
 
 ```sh
 mkdir -p $HOME/Arduino
-cd $HOME/Arduino 
+cd $HOME/Arduino
 ```
 
-## Download hardware platform, including library source code 
+## Download hardware platform, including library source code
 
 ```sh
-mkdir -p hardware/keyboardio
+mkdir -p hardware
 
 ## then clone the hardware definitions to make them available to the arduino environment
-git clone --recursive https://github.com/keyboardio/Arduino-Boards.git hardware/keyboardio/avr
+git clone --recursive https://github.com/keyboardio/Kaleidoscope-Bundle-Keyboardio.git hardware/keyboardio
 ````
 
 
@@ -103,14 +105,14 @@ After that, you'll want to update the Kaleidoscope libraries.
 
 ### MacOS
 ```sh
-cd $HOME/Documents/Arduino/hardware/keyboardio/avr
+cd $HOME/Documents/Arduino/hardware/keyboardio
 make update-submodules
 ```
 
 ### Linux
 
 ```sh
-cd $HOME/Arduino/hardware/keyboardio/avr
+cd $HOME/Arduino/hardware/keyboardio
 make update-submodules
 ```
 
