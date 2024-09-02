@@ -3,7 +3,7 @@
 // See "LICENSE" for license details
 
 #ifndef BUILD_INFORMATION
-#define BUILD_INFORMATION "locally built"
+#define BUILD_INFORMATION "locally built on " __DATE__ " at " __TIME__
 #endif
 
 
@@ -100,8 +100,8 @@ enum { MACRO_VERSION_INFO,
  *  prints out the firmware build information as virtual keystrokes
  */
 
-static void versionInfoMacro(uint8_t keyState) {
-  if (keyToggledOn(keyState)) {
+static void versionInfoMacro(uint8_t key_state) {
+  if (keyToggledOn(key_state)) {
     Macros.type(PSTR("Keyboardio Model 01 - Kaleidoscope "));
     Macros.type(PSTR(BUILD_INFORMATION));
   }
@@ -115,16 +115,11 @@ static void versionInfoMacro(uint8_t keyState) {
  *
  */
 
-static void anyKeyMacro(uint8_t keyState) {
-  static Key lastKey;
-  bool toggledOn = false;
-  if (keyToggledOn(keyState)) {
-    lastKey.setKeyCode(Key_A.getKeyCode() + (uint8_t)(millis() % 36));
-    toggledOn = true;
+static void anyKeyMacro(KeyEvent &event) {
+  if (keyToggledOn(event.state)) {
+    event.key.setKeyCode(Key_A.getKeyCode() + (uint8_t)(millis() % 36));
+    event.key.setFlags(0);
   }
-
-  if (keyIsPressed(keyState))
-    Kaleidoscope.hid().keyboard().pressKey(lastKey, toggledOn);
 }
 
 
@@ -140,15 +135,15 @@ static void anyKeyMacro(uint8_t keyState) {
 
  */
 
-const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
-  switch (macroIndex) {
+const macro_t *macroAction(uint8_t macro_id, KeyEvent &event) {
+  switch (macro_id) {
 
   case MACRO_VERSION_INFO:
-    versionInfoMacro(keyState);
+    versionInfoMacro(event.state);
     break;
 
   case MACRO_ANY:
-    anyKeyMacro(keyState);
+    anyKeyMacro(event);
     break;
   }
   return MACRO_NONE;
