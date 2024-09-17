@@ -111,10 +111,10 @@ If NUMPAD_KEYMAP_PROPER is undefined, the upstream numpad layer is used.
 
 ```
 ___ ___ ___ ___ ___ ___ ___    VER ___ Clr =   /   *   ___
-Tab ___ ___ Up  ___ ___ PUp    ___ ___ 7   8   9   -   ___
+Tab ___ ___ Up  ___ ___ PUp    ___ Sp  7   8   9   -   ___
 Hom ___ Le  Dn  Ri  ___            Bs  4   5   6   +   ___
-End ___ ___ ___ ___ Ins PDn    ___ ___ 1   2   3   Ent ___
-            ___ ___ ___ ___    ___ ___ 0   .
+End ___ ___ ___ ___ Ins PDn    ___ ,   1   2   3   Ent ___
+            ___ ___ ___ ___    000 00  0   .
 ```
 
 The Function Layer
@@ -145,11 +145,14 @@ If FUNCTION_KEYMAP_INVERTED_T is undefined, the upstream function layer is used.
 * Mouse scroll keys under "Q" and "Z" - traditional or "natural" scrolling is
 	configurable by defining the macros SCROLL_UP and SCROLL_DOWN in keymaps.h.
 
+* The "Application" or "Menu" key is swapped with a transparent key so that the
+	butterfly key is the same as the primary layer (normally a modifier).
+
 ```
 `~  F1  F2  F3  F4  F5  LED    Pre F6  F7  F8  F9  F10 F11
 Tab ScU MNW MUp MNE MWE PUp    Pla Nxt CLk Up  SLk Pse F12
-Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  ___ ___
-End ScD MSW MBu MSE Ins PDn    App Mut V+  V-  ___ ___ Sys
+Hom LBu MLe MDn MRi RBu            PSc Le  Dn  Ri  ___ App
+End ScD MSW MBu MSE Ins PDn    ___ Mut V+  V-  ___ ___ Sys
             ___ Del ___ ___    ___ ___ Ret ___
 ```
 

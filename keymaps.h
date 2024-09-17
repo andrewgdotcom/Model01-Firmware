@@ -132,6 +132,8 @@ enum { PRIMARY, NUMPAD, FUNCTION }; // layers
 KEYMAPS(
 
 #if defined (PRIMARY_KEYMAP_QWERTY)
+
+// Upstream QWERTY
   [PRIMARY] = KEYMAP_STACKED
   (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
@@ -149,6 +151,7 @@ KEYMAPS(
 
 #elif defined (PRIMARY_KEYMAP_DVORAK)
 
+// Upstream Dvorak
   [PRIMARY] = KEYMAP_STACKED
   (___,          Key_1,         Key_2,     Key_3,      Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick, Key_Quote,     Key_Comma, Key_Period, Key_P, Key_Y, Key_Tab,
@@ -166,6 +169,7 @@ KEYMAPS(
 
 #elif defined (PRIMARY_KEYMAP_COLEMAK)
 
+// Upstream Colemak
   [PRIMARY] = KEYMAP_STACKED
   (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
    Key_Backtick, Key_Q, Key_W, Key_F, Key_P, Key_G, Key_Tab,
@@ -199,6 +203,7 @@ KEYMAPS(
    MOD_R_PALM),
 
 #elif defined (PRIMARY_KEYMAP_CUSTOM)
+
   // Edit this keymap to make a custom layout
   [PRIMARY] = KEYMAP_STACKED
   (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
@@ -221,7 +226,6 @@ KEYMAPS(
 
 #endif
 
-
 #if defined (NUMPAD_KEYMAP_PROPER)
 
   [NUMPAD] = KEYMAP_STACKED
@@ -241,6 +245,7 @@ KEYMAPS(
 
 #else
 
+// Upstream numpad keymap
   [NUMPAD] =  KEYMAP_STACKED
   (___, ___, ___, ___, ___, ___, ___,
    ___, ___, ___, ___, ___, ___, ___,
@@ -258,7 +263,6 @@ KEYMAPS(
 
 #endif
 
-
 #if defined (FUNCTION_KEYMAP_INVERTED_T)
 
   [FUNCTION] = KEYMAP_STACKED
@@ -271,13 +275,15 @@ KEYMAPS(
 
    Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,   Key_F11,
    Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_CapsLock,             Key_UpArrow,              Key_ScrollLock,  Key_Pause, Key_F12,
-                               Key_PrintScreen,        Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  ___,       ___,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             ___,       Key_Sysreq,
+                               Key_PrintScreen,        Key_LeftArrow,            Key_DownArrow,            Key_RightArrow,  ___,       Key_PcApplication,
+   ___,                        Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             ___,       Key_Sysreq,
    ___, ___, Key_Enter, ___,
    ___)
 // no trailing comma!
+
 #else
 
+// Upstream function keymap
   [FUNCTION] =  KEYMAP_STACKED
   (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           Key_CapsLock,
    Key_Tab,  ___,              Key_mouseUp, ___,        Key_mouseBtnR, Key_mouseWarpEnd, Key_mouseWarpNE,
@@ -293,7 +299,9 @@ KEYMAPS(
    ___, ___, Key_Enter, ___,
    ___)
 // no trailing comma!
+
 #endif
+
 ) // KEYMAPS(
 
 /* Re-enable astyle's indent enforcement */
